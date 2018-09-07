@@ -4,28 +4,25 @@ const { Amenity } = require('./database');
 
 const addDescription = (listing) => {
   new Description({
-    id: listing.id,
-    name: listing.name,
-    ownerName: listing.ownerName,
-    location: listing.location,
-    livingSpace: listing.livingSpace,
-    beds: listing.beds,
-    baths: listing.baths,
-    description: listing.description,
+    id: listing.id, // int
+    name: listing.name, // string
+    ownerName: listing.ownerName, // string
+    location: listing.location, // city
+    livingSpace: listing.livingSpace, // string
+    beds: listing.beds, // int
+    baths: listing.baths, // int
+    description: listing.description, // string
     homehighlights: {
-      cleanliness: listing.homehighlights.cleanliness,
-      experience: listing.homehighlights.experience,
-      checkin: listing.homehighlights.checkin,
+      cleanliness: listing.homehighlights.cleanliness, // obj
+      experience: listing.homehighlights.experience, // obj
+      checkin: listing.homehighlights.checkin, // obj
       hospitality: listing.homehighlights.hospitality,
       value: listing.homehighlights.value,
       superhost: listing.homehighlights.superhost,
     },
   }).save()
-    .then(() => {
-      console.log('description saved');
-    })
     .catch((err) => {
-      console.log(err);
+      throw err;
     });
 };
 
@@ -38,10 +35,7 @@ const addAmenity = (listing) => {
     bedAndBath: listing.bedAndBath,
     safetyFeatures: listing.safetyFeatures,
     notIncluded: listing.notIncluded,
-  }).save()
-    .then(() => {
-      console.log('amenity saved');
-    });
+  }).save();
 };
 
 module.exports = { addDescription, addAmenity };
