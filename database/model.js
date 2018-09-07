@@ -1,6 +1,6 @@
 require('dotenv').config();
 const { Description } = require('./database');
-const { Amenity } = require('./database');
+// const { Amenity } = require('./database');
 
 const addDescription = (listing) => {
   new Description({
@@ -20,22 +20,23 @@ const addDescription = (listing) => {
       value: listing.homehighlights.value,
       superhost: listing.homehighlights.superhost,
     },
+    amenity: listing.amenity,
   }).save()
     .catch((err) => {
       throw err;
     });
 };
 
-const addAmenity = (listing) => {
-  new Amenity({
-    id: listing.id,
-    basics: listing.basics,
-    dining: listing.dining,
-    guestAccess: listing.guestAccess,
-    bedAndBath: listing.bedAndBath,
-    safetyFeatures: listing.safetyFeatures,
-    notIncluded: listing.notIncluded,
-  }).save();
-};
+// const addAmenity = (listing) => {
+//   new Amenity({
+//     id: listing.id,
+//     basics: listing.basics,
+//     dining: listing.dining,
+//     guestAccess: listing.guestAccess,
+//     bedAndBath: listing.bedAndBath,
+//     safetyFeatures: listing.safetyFeatures,
+//     notIncluded: listing.notIncluded,
+//   }).save();
+// };
 
-module.exports = { addDescription, addAmenity };
+module.exports = { addDescription };
