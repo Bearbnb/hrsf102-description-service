@@ -12,15 +12,6 @@ db.once('open', () => {
   console.log('mongoose is connected');
 });
 
-// const homehighlightsSchema = new mongoose.Schema({
-//   cleanliness: String,
-//   experience: String,
-//   checkin: String,
-//   hospitality: String,
-//   value: String,
-//   superhost: Boolean,
-// });
-
 const descriptionsSchema = new mongoose.Schema({
   id: Number,
   name: String,
@@ -32,11 +23,6 @@ const descriptionsSchema = new mongoose.Schema({
   description: String,
   homehighlights: {},
 });
-
-// const amenitySchema = new mongoose.Schema({
-//   name: String,
-//   details: String,
-// });
 
 const amenitiesSchema = new mongoose.Schema({
   id: Number,
