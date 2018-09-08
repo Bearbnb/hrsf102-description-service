@@ -1,8 +1,4 @@
-const getRandomInt = (min, max) => {
-  const newMin = Math.ceil(min);
-  const newMax = Math.floor(max);
-  return Math.floor(Math.random() * (newMax - newMin)) + min;
-};
+const { getRandomInt } = require('./helpers.js');
 
 const basics = [
   { name: 'Wifi', details: 'continuous access in the listing' },

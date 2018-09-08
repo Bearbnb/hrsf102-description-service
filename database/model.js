@@ -3,23 +3,17 @@ const { Description } = require('./database');
 // const { Amenity } = require('./database');
 
 const addDescription = (listing) => {
+  console.log(listing.amenity);
   new Description({
-    id: listing.id, // int
-    name: listing.name, // string
-    ownerName: listing.ownerName, // string
+    id: listing.id,
+    name: listing.name,
+    ownerName: listing.ownerName,
     location: listing.location, // city
     livingSpace: listing.livingSpace, // string
     beds: listing.beds, // int
     baths: listing.baths, // int
     description: listing.description, // string
-    homehighlights: {
-      cleanliness: listing.homehighlights.cleanliness, // obj
-      experience: listing.homehighlights.experience, // obj
-      checkin: listing.homehighlights.checkin, // obj
-      hospitality: listing.homehighlights.hospitality,
-      value: listing.homehighlights.value,
-      superhost: listing.homehighlights.superhost,
-    },
+    homehighlights: listing.homeHighlights,
     amenity: listing.amenity,
   }).save()
     .catch((err) => {

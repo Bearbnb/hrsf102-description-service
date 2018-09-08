@@ -1,8 +1,8 @@
 const faker = require('faker');
 
 const { addDescription } = require('./model.js');
+const { getRandomInt, generateProperties } = require('./helpers');
 const {
-  getRandomInt,
   basics,
   basicsRange,
   dining,
@@ -17,16 +17,22 @@ const {
   notIncludedRange,
 } = require('./amenitiesSeedData.js');
 
-const seedDatabaseWithAmenities = () => {
-  // const listings = [];
+const {
+  adjectives,
+  places,
+  additions,
+  homeHighlights,
+  homeHighlightsRange,
+  // displayAmenities,
+} = require('./descriptionsSeedData.js');
+
+const generateListingName = () => `${adjectives[getRandomInt(0, adjectives.length)]} `
+  + `${places[getRandomInt(0, places.length)]} `
+  + `with ${additions[getRandomInt(0, additions.length)]}`;
+
+const generateAmenities = () => {
+  const amenities = [];
   for (let i = 1; i < 101; i += 1) {
-    const listing = {};
-    listing.id = i;
-    listing.ownerName = `${faker.name.firstName} ${faker.name.lastName}`;
-
-
-
-
     const amenity = {};
     amenity.id = i;
     amenity.basics = [];
@@ -77,14 +83,47 @@ const seedDatabaseWithAmenities = () => {
         amenity.notIncluded.push(notIncluded[randomNotIncluded]);
       }
     }
-
-    listing.amenity = amenity;
+    amenities.push(amenity);
   }
 
-
-  // listings.forEach((listing) => {
-  //   addAmenity(listing);
-  // });
+  return amenities;
 };
 
-seedDatabaseWithAmenities();
+const generateDescriptions = () => {
+  const descriptions = [];
+  for (let i = 1; i < 101; i += 1) {
+    const description = {};
+
+    description.id = i;
+    description.name = generateListingName();
+    description.ownerName = `${faker.name.firstName()} ${faker.name.lastName()}`;
+    description.location = faker.address.city();
+    description.livingSpace = places[getRandomInt(0, places.length)];
+    description.beds = getRandomInt(1, 9);
+    description.baths = getRandomInt(1, 4);
+    description.description = faker.lorem.paragraph();
+    description.homeHighlights = [];
+    generateProperties(homeHighlights, description.homeHighlights);
+
+    descriptions.push(description);
+  }
+
+  return descriptions;
+};
+generateDescriptions();
+
+const seedDatabase = () => {
+  const amenities = generateAmenities();
+  const descriptions = generateDescriptions();
+
+  const listings = descriptions.map((description, i) => {
+    description.amenity = amenities[i];
+    return description;
+  });
+
+  listings.forEach((listing) => {
+    addDescription(listing);
+  });
+};
+
+seedDatabase();
