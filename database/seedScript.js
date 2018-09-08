@@ -1,7 +1,7 @@
 const faker = require('faker');
 
 const { addDescription } = require('./model.js');
-const { getRandomInt, generateProperties } = require('./helpers');
+const { getRandomInt, generateProperties, hipsterIpsum } = require('./helpers');
 const {
   basics,
   dining,
@@ -35,12 +35,12 @@ const generateAmenities = () => {
     amenity.safetyFeatures = [];
     amenity.notIncluded = [];
 
-    generateProperties(basics, amenity.basics);
+    generateProperties(basics, amenity.basics, 3);
     generateProperties(dining, amenity.dining);
-    generateProperties(guestAccess, amenity.guestAccess);
-    generateProperties(bedAndBath, amenity.bedAndBath);
-    generateProperties(safetyFeatures, amenity.safetyFeatures);
-    generateProperties(notIncluded, amenity.notIncluded);
+    generateProperties(guestAccess, amenity.guestAccess, 3);
+    generateProperties(bedAndBath, amenity.bedAndBath, 3);
+    generateProperties(safetyFeatures, amenity.safetyFeatures, 3);
+    generateProperties(notIncluded, amenity.notIncluded, 3);
     amenities.push(amenity);
   }
 
@@ -59,9 +59,11 @@ const generateDescriptions = () => {
     description.livingSpace = places[getRandomInt(0, places.length)];
     description.beds = getRandomInt(1, 9);
     description.baths = getRandomInt(1, 4);
-    description.description = faker.lorem.paragraph();
+    description.description = hipsterIpsum();
     description.homeHighlights = [];
-    generateProperties(homeHighlights, description.homeHighlights);
+    description.displayAmenities = displayAmenities;
+
+    generateProperties(homeHighlights, description.homeHighlights, 3);
 
     descriptions.push(description);
   }

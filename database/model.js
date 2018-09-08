@@ -3,7 +3,6 @@ const { Description } = require('./database');
 // const { Amenity } = require('./database');
 
 const addDescription = (listing) => {
-  console.log(listing.amenity);
   new Description({
     id: listing.id,
     name: listing.name,
@@ -14,6 +13,7 @@ const addDescription = (listing) => {
     baths: listing.baths, // int
     description: listing.description, // string
     homehighlights: listing.homeHighlights,
+    displayAmenities: listing.displayAmenities,
     amenity: listing.amenity,
   }).save()
     .catch((err) => {
