@@ -1,7 +1,7 @@
 const faker = require('faker');
 
-const { addDescription } = require('./model.js');
-const { getRandomInt, generateProperties, hipsterIpsum } = require('./helpers');
+const { addDescription } = require('../database/model.js');
+const { getRandomInt, generateProperties, hipsterIpsum } = require('./helpers.js');
 const {
   basics,
   dining,

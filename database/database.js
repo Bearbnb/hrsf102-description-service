@@ -32,6 +32,5 @@ const descriptionsSchema = new mongoose.Schema({
 });
 
 const Description = mongoose.model('descriptions', descriptionsSchema);
-// const Amenity = mongoose.model('amenities', amenitiesSchema);
 
 module.exports = { Description };
