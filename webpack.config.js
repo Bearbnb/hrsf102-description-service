@@ -1,7 +1,7 @@
 const path = require('path');
 
 const SRC_DIR = path.resolve('client', 'src');
-const DIST_DIR = path.resolve('client/public/dist');
+const DIST_DIR = path.resolve('public/dist');
 
 module.exports = {
   entry: `${SRC_DIR}/index.jsx`,
