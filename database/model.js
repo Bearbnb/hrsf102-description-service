@@ -6,11 +6,11 @@ const addDescription = (listing) => {
     id: listing.id,
     name: listing.name,
     ownerName: listing.ownerName,
-    location: listing.location, // city
-    livingSpace: listing.livingSpace, // string
-    beds: listing.beds, // int
-    baths: listing.baths, // int
-    description: listing.description, // string
+    location: listing.location,
+    livingSpace: listing.livingSpace,
+    beds: listing.beds,
+    baths: listing.baths,
+    description: listing.description,
     homehighlights: listing.homeHighlights,
     displayAmenities: listing.displayAmenities,
     amenity: listing.amenity,
