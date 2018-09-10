@@ -20,4 +20,13 @@ const addDescription = (listing) => {
     });
 };
 
-module.exports = { addDescription };
+const getListing = (id, cb) => {
+  Description.find({ id }, (err, docs) => {
+    if (err) {
+      throw err;
+    }
+    cb(docs[0]);
+  });
+};
+
+module.exports = { addDescription, getListing };
