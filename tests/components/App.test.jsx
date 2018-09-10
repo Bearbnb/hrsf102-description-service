@@ -6,3 +6,11 @@ it('renders', () => {
   const wrapper = shallow(<App />);
   expect(wrapper.find('div').text()).toEqual('React App');
 });
+
+it('should call componentDidMount once', () => {
+  const spy = jest.spyOn(App.prototype, 'componentWillMount');
+  const wrapper = mount(<App />);
+
+  wrapper.instance().componentWillMount();
+  expect(spy).toHaveBeenCalled();
+});
