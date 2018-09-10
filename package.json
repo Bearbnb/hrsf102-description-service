@@ -12,7 +12,8 @@
     "url": "https://github.com/Bearbnb/hrsf102-description-service"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js --w",
+    "dev": "nodemon server/server.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
