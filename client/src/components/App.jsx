@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+import { getRandomInt } from '../../../seedDatabase/helpers';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -8,7 +10,7 @@ class App extends React.Component {
   }
 
   componentWillMount() {
-    const listing = 1;
+    const listing = getRandomInt(1, 101);
     axios.get('/listings', {
       params: {
         id: listing,
