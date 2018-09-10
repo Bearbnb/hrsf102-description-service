@@ -2,11 +2,26 @@ import React from 'react';
 import axios from 'axios';
 
 import { getRandomInt } from '../../../seedDatabase/helpers';
+import Header from './Header.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      details: {
+        id: 0,
+        name: '',
+        ownerName: '',
+        location: '',
+        livingSpace: '',
+        beds: 0,
+        baths: 0,
+        description: '',
+        homehighlights: [],
+        displayAmenities: [],
+        amenity: {},
+      },
+    };
   }
 
   componentWillMount() {
@@ -17,7 +32,7 @@ class App extends React.Component {
       },
     }).then((res) => {
       this.setState({
-        description: res.data,
+        details: res.data,
       });
     }).catch((err) => {
       console.log(err);
@@ -25,9 +40,31 @@ class App extends React.Component {
   }
 
   render() {
+    const { details } = this.state;
+    const {
+      name,
+      ownerName,
+      location,
+      livingSpace,
+      beds,
+      baths,
+      description,
+      homehighlights,
+      displayAmenities,
+      amenity,
+    } = details;
+
     return (
       <div>
         React App
+        <Header
+          beds={beds}
+          baths={baths}
+          name={name}
+          ownerName={ownerName}
+          location={location}
+          livingSpace={livingSpace}
+        />
       </div>
     );
   }

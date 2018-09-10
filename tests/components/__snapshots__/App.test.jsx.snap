@@ -3,5 +3,13 @@
 exports[`should render properly 1`] = `
 <div>
   React App
+  <Header
+    baths={0}
+    beds={0}
+    livingSpace=""
+    location=""
+    name=""
+    ownerName=""
+  />
 </div>
 `;
