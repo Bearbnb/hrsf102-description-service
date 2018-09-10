@@ -11,7 +11,6 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 app.get('/listings', (req, res) => {
   const params = queryString.parse(req.url.replace('/listings?', ''));
   getListing(params.id, (listing) => {
-    console.log(listing);
     res.send(listing);
   });
 });

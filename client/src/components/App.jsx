@@ -17,7 +17,6 @@ class App extends React.Component {
       this.setState({
         description: res.data,
       });
-      console.log(res.data);
     }).catch((err) => {
       console.log(err);
     });
