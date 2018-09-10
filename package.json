@@ -7,13 +7,17 @@
   "engines": {
     "node": ">=6.13.0"
   },
+  "resolutions": {
+    "babel-core": "7.0.0-bridge.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Bearbnb/hrsf102-description-service"
   },
   "scripts": {
     "build": "webpack --config webpack.config.js --w",
-    "dev": "nodemon server/server.js"
+    "dev": "nodemon server/server.js",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -31,12 +35,16 @@
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.2",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
     "eslint": "^5.5.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.0"
   }
