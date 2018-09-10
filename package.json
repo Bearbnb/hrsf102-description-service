@@ -17,7 +17,8 @@
   "scripts": {
     "build": "webpack --config webpack.config.js --w",
     "dev": "nodemon server/server.js",
-    "test": "jest"
+    "test": "jest",
+    "test-watch": "jest --watch"
   },
   "dependencies": {
     "axios": "^0.18.0",

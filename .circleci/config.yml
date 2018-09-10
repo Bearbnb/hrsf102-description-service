@@ -20,5 +20,3 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run test
-
-

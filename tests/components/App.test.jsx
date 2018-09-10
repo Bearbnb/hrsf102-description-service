@@ -3,9 +3,8 @@ import React from 'react';
 import toJson from 'enzyme-to-json';
 import App from '../../client/src/components/App';
 
-it('renders', () => {
+it('should render properly', () => {
   const wrapper = shallow(<App />);
-  expect(wrapper.find('div').text()).toEqual('React App');
   expect(toJson(wrapper)).toMatchSnapshot();
 });
 
