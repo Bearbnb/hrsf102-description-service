@@ -2,7 +2,7 @@
 
 exports[`<App /> should render properly 1`] = `
 <div>
-  React App
+  Airbnb Listing
   <Header
     baths={0}
     beds={0}
@@ -10,6 +10,9 @@ exports[`<App /> should render properly 1`] = `
     location=""
     name=""
     ownerName=""
+  />
+  <HomeHighlights
+    homehighlights={Array []}
   />
 </div>
 `;

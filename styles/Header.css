@@ -1,4 +1,7 @@
 .container {
   border: solid black 1px;
-  width: 40%;
+  width: 50%;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

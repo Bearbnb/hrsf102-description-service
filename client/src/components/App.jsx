@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import { getRandomInt } from '../../../seedDatabase/helpers';
 import Header from './Header.jsx';
+import HomeHighlights from './HomeHighlights.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -56,7 +57,7 @@ class App extends React.Component {
 
     return (
       <div>
-        React App
+        Airbnb Listing
         <Header
           beds={beds}
           baths={baths}
@@ -64,6 +65,9 @@ class App extends React.Component {
           ownerName={ownerName}
           location={location}
           livingSpace={livingSpace}
+        />
+        <HomeHighlights
+          homehighlights={homehighlights}
         />
       </div>
     );
