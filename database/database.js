@@ -23,12 +23,14 @@ const descriptionsSchema = new mongoose.Schema({
   ownerName: String,
   location: String,
   livingSpace: String,
+  guests: Number,
+  bedrooms: Number,
   beds: Number,
   baths: Number,
-  description: String,
   homehighlights: [{}],
+  description: String,
   displayAmenities: [String],
-  amenity: amenitiesSchema,
+  amenities: amenitiesSchema,
 });
 
 const Description = mongoose.model('descriptions', descriptionsSchema);

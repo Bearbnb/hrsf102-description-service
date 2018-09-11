@@ -8,12 +8,14 @@ const addDescription = (listing) => {
     ownerName: listing.ownerName,
     location: listing.location,
     livingSpace: listing.livingSpace,
+    guests: listing.guests,
+    bedrooms: listing.bedrooms,
     beds: listing.beds,
     baths: listing.baths,
+    homehighlights: listing.homehighlights,
     description: listing.description,
-    homehighlights: listing.homeHighlights,
     displayAmenities: listing.displayAmenities,
-    amenity: listing.amenity,
+    amenities: listing.amenities,
   }).save()
     .catch((err) => {
       throw err;

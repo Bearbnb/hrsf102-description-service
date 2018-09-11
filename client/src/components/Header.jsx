@@ -7,22 +7,22 @@ const Header = ({
 }) => (
   <div className={styles.container}>
     <div>
-      name: {name}
+      {name}
     </div>
     <div>
-      baths: {baths}
+      {baths} bath
     </div>
     <div>
-      beds: {beds}
+      {beds} bed
     </div>
     <div>
-      ownerName: {ownerName}
+      {ownerName}
     </div>
     <div>
-      location: {location}
+      {location}
     </div>
     <div>
-      livingSpace: {livingSpace}
+      {livingSpace}
     </div>
   </div>
 );

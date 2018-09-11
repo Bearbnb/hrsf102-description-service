@@ -57,6 +57,8 @@ const generateDescriptions = () => {
     description.ownerName = `${faker.name.firstName()} ${faker.name.lastName()}`;
     description.location = faker.address.city();
     description.livingSpace = places[getRandomInt(0, places.length)];
+    description.guests = getRandomInt(0, 10);
+    description.bedrooms = getRandomInt(0, 6);
     description.beds = getRandomInt(1, 9);
     description.baths = getRandomInt(1, 4);
     description.description = hipsterIpsum();
@@ -77,7 +79,7 @@ const seedDatabase = () => {
   const descriptions = generateDescriptions();
 
   const listings = descriptions.map((description, i) => {
-    description.amenity = amenities[i];
+    description.amenities = amenities[i];
     return description;
   });
 
