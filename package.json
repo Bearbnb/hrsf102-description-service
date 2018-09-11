@@ -17,12 +17,10 @@
   "scripts": {
     "build": "webpack --config webpack.config.js --w",
     "dev": "nodemon server/server.js",
-    "test": "jest",
-    "test-watch": "jest --watch"
+    "test": "jest --watch"
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "babel-plugin-react-css-modules": "^3.4.2",
     "body-parser": "^1.18.3",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
