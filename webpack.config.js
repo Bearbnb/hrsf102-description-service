@@ -1,17 +1,26 @@
 const path = require('path');
+// const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const SRC_DIR = path.resolve('client', 'src');
 const DIST_DIR = path.resolve('public/dist');
 
 module.exports = {
   entry: `${SRC_DIR}/index.jsx`,
-  output: {
-    filename: 'bundle.js',
-    path: DIST_DIR,
-  },
   mode: 'development',
   module: {
     rules: [
+      {
+        test: /\.css$/,
+        loader: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+            },
+          },
+        ],
+      },
       {
         test: /\.jsx$/,
         exclude: /(node_modules)/,
@@ -24,4 +33,11 @@ module.exports = {
       },
     ],
   },
+  output: {
+    filename: 'bundle.js',
+    path: DIST_DIR,
+  },
+  // plugins: [
+  //   new ExtractTextPlugin('styles.css'),
+  // ],
 };

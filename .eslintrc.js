@@ -3,7 +3,8 @@ module.exports = {
   "rules": {
     "import/extensions": 0,
     "no-console": 0,
-    "no-unused-vars": 1
+    "no-unused-vars": 1,
+    "jsx-one-expression-per-line": 0
   },
   "env": {
     "jest": true
