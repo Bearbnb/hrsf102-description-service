@@ -6,7 +6,7 @@ import styles from '../../../styles/HomeHighlights.css';
 
 const HomeHighlights = ({ homehighlights }) => (
   <div className={styles.container}>
-    HOME HIGHLIGHTS
+    <div className={styles.title}>HOME HIGHLIGHTS</div>
     {homehighlights.map((highlight, i) => <HomeHighlight key={i} highlight={highlight} />)}
   </div>
 );

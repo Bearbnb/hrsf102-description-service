@@ -1,4 +1,12 @@
 .container {
-  border: solid black 1px;
+  border: solid	#E0E0E0 1px;
   width: 50%;
+  font-family: 'Roboto Condensed', sans-serif;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #C8C8C8;
+}
+
+.title {
+  font-size: 12px;
+  margin: 8px 0px 0px 8px;
 }

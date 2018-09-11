@@ -4,7 +4,15 @@ import PropTypes from 'prop-types';
 import styles from '../../../styles/HomeHighlight.css';
 
 const HomeHighlight = ({ highlight }) => (
-  <div className={styles.container}><span>{highlight.highlight}</span> · {highlight.details}</div>
+  <div className={styles.container}>
+    <span
+      className={styles.highlight}
+    >{highlight.highlight}
+    </span> · <span
+      className={styles.details}
+    >{highlight.details}
+    </span>
+  </div>
 );
 
 HomeHighlight.propTypes = {
