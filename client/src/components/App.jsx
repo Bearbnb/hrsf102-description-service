@@ -2,8 +2,9 @@ import React from 'react';
 import axios from 'axios';
 
 import { getRandomInt } from '../../../seedDatabase/helpers';
-import Header from './Header.jsx';
+
 import HomeHighlights from './HomeHighlights.jsx';
+import HeaderContainer from './HeaderContainer.jsx';
 import styles from '../../../styles/App.css';
 
 class App extends React.Component {
@@ -50,6 +51,8 @@ class App extends React.Component {
       ownerName,
       location,
       livingSpace,
+      guests,
+      bedrooms,
       beds,
       baths,
       description,
@@ -61,7 +64,9 @@ class App extends React.Component {
     return (
       <div className={styles.container}>
         Airbnb Listing
-        <Header
+        <HeaderContainer
+          guests={guests}
+          bedrooms={bedrooms}
           beds={beds}
           baths={baths}
           name={name}
