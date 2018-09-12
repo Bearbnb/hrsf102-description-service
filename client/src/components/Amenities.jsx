@@ -1,27 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../../../styles/AmenitiesDisplay.css';
+import styles from '../../../styles/Amenities.css';
 
 const Amenities = ({ hideAmenities, showModal }) => {
-  let modal;
-
-  if (showModal) {
-    modal = (
-      <div>
-        DISPLAY
-      </div>
-    );
-  } else {
-    modal = (
-      <div>
-      
-      </div> 
-    );
-  }
+  const display = showModal ? styles.displayBlock : styles.displayNone;
 
   return (
-    modal
+    <div className={`${display} ${styles.modal}`}>
+      <section className={styles.modalMain}>
+        <button type="button" onClick={() => hideAmenities()}>close</button>
+      </section>
+    </div>
   );
 };
+
+// let modal;
+
+// if (showModal) {
+//   modal = (
+//     <div className={styles.modalOverlayDiv}>
+//       DISPLAY
+//       <button
+//         type="button"
+//         onClick={() => hideAmenities()}
+//       >
+//       Close
+//       </button>
+//     </div>
+//   );
+// } else {
+//   modal = (
+//     <div />
+//   );
+// }
+
+// return (
+//   modal
+// );
 
 export default Amenities;
