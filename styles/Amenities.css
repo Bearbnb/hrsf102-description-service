@@ -4,20 +4,21 @@
   left: 0;
   width:100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.6);
 }
 
-.modal-main {
+.modalMain {
   position:fixed;
   background: white;
-  width: 80%;
-  height: auto;
+  width: 40%;
+  height: 80%;
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
+  box-shadow: 0 0 7px #C8C8C8;
 }
 
-.display-block {
+.displayBlock {
   display: block;
 }
 

@@ -1,9 +1,9 @@
 .container {
   border: solid	#E0E0E0 1px;
-  width: 65%;
-  font-family: 'Roboto Condensed', sans-serif;
+  width: 40%;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
   border-radius: 5px;
-  box-shadow: 1px 1px 1px #C8C8C8;
+  box-shadow: 0 0 2px #C8C8C8;
   margin: 10px auto 10px auto;
   color: #484848;
 }

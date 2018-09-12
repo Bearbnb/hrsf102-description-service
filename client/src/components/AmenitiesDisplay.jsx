@@ -47,6 +47,7 @@ const AmenitiesDisplay = ({
       </button>
 
       <Amenities
+        amenities={amenities}
         hideAmenities={hideAmenities}
         showModal={showModal}
       />
