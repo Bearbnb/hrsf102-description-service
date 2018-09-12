@@ -7,13 +7,13 @@ const Header = ({
 }) => (
   <div className={styles.container}>
     <div>
+      <span className={styles.livingSpace}>ENTIRE {livingSpace.toUpperCase()}</span>
+    </div>
+    <div className={styles.name}>
       {name}
     </div>
     <div>
       {location}
-    </div>
-    <div>
-      {livingSpace}
     </div>
   </div>
 );

@@ -1,11 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<App /> should render properly 1`] = `
-<div>
+<div
+  className="container"
+>
   Airbnb Listing
-  <Header
+  <HeaderContainer
     baths={0}
+    bedrooms={0}
     beds={0}
+    guests={0}
     livingSpace=""
     location=""
     name=""
