@@ -7,7 +7,10 @@ const ListingStats = ({
   guests, bedrooms, beds, baths,
 }) => (
   <div className={styles.container}>
-    <div>{guests} guests {bedrooms} bedrooms {beds} beds {baths} baths</div>
+    <div className={styles.stat}>{guests} guests</div>
+    <div className={styles.stat}>{bedrooms} bedrooms</div>
+    <div className={styles.stat}>{beds} beds</div>
+    <div className={styles.stat}>{baths} baths</div>
   </div>
 );
 
