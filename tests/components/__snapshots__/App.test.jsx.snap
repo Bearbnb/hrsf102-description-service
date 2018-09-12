@@ -23,6 +23,9 @@ exports[`<App /> should render properly 1`] = `
   <AmenitiesDisplay
     amenities={Object {}}
     displayAmenities={Array []}
+    hideAmenities={[Function]}
+    showAmenities={[Function]}
+    showModal={false}
   />
 </div>
 `;
