@@ -1,0 +1,29 @@
+.container {
+  width: 65%;
+  margin: 30px auto 15px auto;
+  font-size: 18px;
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.rightColumn {
+  padding-right: 100px;
+}
+
+.amenity {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.pageBreak {
+  color: #808080;
+}

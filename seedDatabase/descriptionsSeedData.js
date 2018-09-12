@@ -77,6 +77,9 @@ const displayAmenities = [
   'Hangers',
   'Iron',
   'TV',
+  'Hot tub',
+  'Indoor Fireplace',
+  'Free Parking',
 ];
 
 module.exports = {
