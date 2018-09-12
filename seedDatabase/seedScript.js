@@ -1,7 +1,7 @@
 const faker = require('faker');
 
 const { addDescription } = require('../database/model.js');
-const { getRandomInt, generateProperties, hipsterIpsum } = require('./helpers.js');
+const { getRandomInt, generateProperties, descriptionIpsum } = require('./helpers.js');
 const {
   basics,
   dining,
@@ -61,7 +61,7 @@ const generateDescriptions = () => {
     description.bedrooms = getRandomInt(2, 6);
     description.beds = getRandomInt(2, 9);
     description.baths = getRandomInt(2, 4);
-    description.description = hipsterIpsum();
+    description.description = descriptionIpsum();
     description.homehighlights = [];
     description.displayAmenities = displayAmenities;
 

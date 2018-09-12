@@ -6,6 +6,7 @@ import { getRandomInt } from '../../../seedDatabase/helpers';
 import HomeHighlights from './HomeHighlights.jsx';
 import HeaderContainer from './HeaderContainer.jsx';
 import AmenitiesDisplay from './AmenitiesDisplay.jsx';
+import Description from './Description.jsx';
 import styles from '../../../styles/App.css';
 
 class App extends React.Component {
@@ -77,8 +78,12 @@ class App extends React.Component {
         <HomeHighlights
           homehighlights={homehighlights}
         />
+        <Description
+          description={description}
+        />
         <AmenitiesDisplay
           displayAmenities={displayAmenities}
+          amenities={amenities}
         />
       </div>
     );

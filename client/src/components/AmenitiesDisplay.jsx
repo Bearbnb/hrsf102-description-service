@@ -2,10 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from '../../../styles/AmenitiesDisplay.css';
+import { countAmenities } from '../../../seedDatabase/helpers';
 
-const AmenitiesDisplay = ({ displayAmenities }) => {
+const AmenitiesDisplay = ({ displayAmenities, amenities }) => {
   const column1 = displayAmenities.slice(0, 3);
   const column2 = displayAmenities.slice(3, 6);
+
+  const amenitiesCount = countAmenities(amenities);
+
   return (
     <div className={styles.container}>
       <hr className={styles.pageBreak} />
@@ -28,6 +32,11 @@ const AmenitiesDisplay = ({ displayAmenities }) => {
 
       </div>
 
+      <button
+        className={styles.button}
+        type="button"
+      >Show all {amenitiesCount} amenities
+      </button>
     </div>
   );
 };
