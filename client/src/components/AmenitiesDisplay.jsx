@@ -1,14 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Amenities from './Amenities.jsx';
 import styles from '../../../styles/AmenitiesDisplay.css';
 import { countAmenities } from '../../../seedDatabase/helpers';
 
-const AmenitiesDisplay = ({ displayAmenities, amenities }) => {
+const AmenitiesDisplay = ({
+  displayAmenities,
+  amenities,
+  showModal,
+  showAmenities,
+  hideAmenities,
+}) => {
   const column1 = displayAmenities.slice(0, 3);
   const column2 = displayAmenities.slice(3, 6);
 
   const amenitiesCount = countAmenities(amenities);
+  console.log(showModal, 'showModal in Amenities display');
 
   return (
     <div className={styles.container}>
@@ -19,14 +27,14 @@ const AmenitiesDisplay = ({ displayAmenities, amenities }) => {
       <div className={styles.columns}>
 
         <div>
-          {column1.map((amenity) => {
-            return (<div className={styles.amenity}>{amenity}</div>);
+          {column1.map((amenity, i) => {
+            return (<div key={i} className={styles.amenity}>{amenity}</div>);
           })}
         </div>
 
         <div className={styles.rightColumn}>
-          {column2.map((amenity) => {
-            return (<div className={styles.amenity}>{amenity}</div>);
+          {column2.map((amenity, i) => {
+            return (<div key={i} className={styles.amenity}>{amenity}</div>);
           })}
         </div>
 
@@ -35,8 +43,13 @@ const AmenitiesDisplay = ({ displayAmenities, amenities }) => {
       <button
         className={styles.button}
         type="button"
+        onClick={() => showAmenities()}
       >Show all {amenitiesCount} amenities
       </button>
+      <Amenities
+        hideAmenities={hideAmenities}
+        showModal={showModal}
+      />
     </div>
   );
 };

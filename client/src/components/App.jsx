@@ -28,7 +28,10 @@ class App extends React.Component {
         displayAmenities: [],
         amenities: {},
       },
+      showModal: false,
     };
+    this.showAmenities = this.showAmenities.bind(this.showAmenities);
+    this.hideAmenities = this.hideAmenities.bind(this.hideAmenities);
   }
 
   componentWillMount() {
@@ -43,6 +46,18 @@ class App extends React.Component {
       });
     }).catch((err) => {
       console.log(err);
+    });
+  }
+
+  showAmenities() {
+    this.setState({
+      showModal: true,
+    });
+  }
+
+  hideAmenities() {
+    this.setState({
+      showModal: false,
     });
   }
 
@@ -62,6 +77,7 @@ class App extends React.Component {
       displayAmenities,
       amenities,
     } = details;
+    const { showModal } = this.state;
 
     return (
       <div className={styles.container}>
@@ -84,6 +100,9 @@ class App extends React.Component {
         <AmenitiesDisplay
           displayAmenities={displayAmenities}
           amenities={amenities}
+          showModal={showModal}
+          showAmenities={this.showAmenities}
+          hideAmenities={this.hideAmenities}
         />
       </div>
     );
