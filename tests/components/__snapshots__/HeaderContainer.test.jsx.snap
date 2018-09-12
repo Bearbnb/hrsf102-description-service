@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderContainer /> should render properly 1`] = `
+<div>
+  <Header
+    baths={0}
+    beds={0}
+    livingSpace="Apartment"
+    location="San Francisco"
+    name="Cozy thing"
+    ownerName="Charlie P"
+  />
+  <ListingStats
+    baths={0}
+    bedrooms={0}
+    beds={0}
+    guests={0}
+  />
+</div>
+`;

@@ -17,7 +17,11 @@ exports[`<App /> should render properly 1`] = `
   <HomeHighlights
     homehighlights={Array []}
   />
+  <Description
+    description=""
+  />
   <AmenitiesDisplay
+    amenities={Object {}}
     displayAmenities={Array []}
   />
 </div>

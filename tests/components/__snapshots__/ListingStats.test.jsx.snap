@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListingStats /> should render properly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="stat"
+  >
+    0
+     guests
+  </div>
+  <div
+    className="stat"
+  >
+    0
+     bedrooms
+  </div>
+  <div
+    className="stat"
+  >
+    0
+     beds
+  </div>
+  <div
+    className="stat"
+  >
+    0
+     baths
+  </div>
+</div>
+`;
