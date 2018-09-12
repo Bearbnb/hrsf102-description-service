@@ -5,6 +5,7 @@ import { getRandomInt } from '../../../seedDatabase/helpers';
 
 import HomeHighlights from './HomeHighlights.jsx';
 import HeaderContainer from './HeaderContainer.jsx';
+import AmenitiesDisplay from './AmenitiesDisplay.jsx';
 import styles from '../../../styles/App.css';
 
 class App extends React.Component {
@@ -24,7 +25,7 @@ class App extends React.Component {
         description: '',
         homehighlights: [],
         displayAmenities: [],
-        amenity: {},
+        amenities: {},
       },
     };
   }
@@ -58,12 +59,11 @@ class App extends React.Component {
       description,
       homehighlights,
       displayAmenities,
-      amenity,
+      amenities,
     } = details;
 
     return (
       <div className={styles.container}>
-        Airbnb Listing
         <HeaderContainer
           guests={guests}
           bedrooms={bedrooms}
@@ -76,6 +76,9 @@ class App extends React.Component {
         />
         <HomeHighlights
           homehighlights={homehighlights}
+        />
+        <AmenitiesDisplay
+          displayAmenities={displayAmenities}
         />
       </div>
     );

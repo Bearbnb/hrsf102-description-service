@@ -4,7 +4,6 @@ exports[`<App /> should render properly 1`] = `
 <div
   className="container"
 >
-  Airbnb Listing
   <HeaderContainer
     baths={0}
     bedrooms={0}
@@ -17,6 +16,9 @@ exports[`<App /> should render properly 1`] = `
   />
   <HomeHighlights
     homehighlights={Array []}
+  />
+  <AmenitiesDisplay
+    displayAmenities={Array []}
   />
 </div>
 `;
