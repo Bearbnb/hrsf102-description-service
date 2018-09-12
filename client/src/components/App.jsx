@@ -30,8 +30,8 @@ class App extends React.Component {
       },
       showModal: false,
     };
-    this.showAmenities = this.showAmenities.bind(this.showAmenities);
-    this.hideAmenities = this.hideAmenities.bind(this.hideAmenities);
+    this.showAmenities = this.showAmenities.bind(this);
+    this.hideAmenities = this.hideAmenities.bind(this);
   }
 
   componentWillMount() {
@@ -56,6 +56,7 @@ class App extends React.Component {
   }
 
   hideAmenities() {
+    console.log(this);
     this.setState({
       showModal: false,
     });
