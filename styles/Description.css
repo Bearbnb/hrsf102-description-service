@@ -1,0 +1,23 @@
+.container {
+  width: 65%;
+  margin: 20px auto 10px auto;
+}
+
+.button {
+  background:none!important;
+  margin-top: 25px;
+  color: #6BB7B9;
+  border:none; 
+  padding:0!important;
+  font: inherit;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  text-decoration: underline;
+}

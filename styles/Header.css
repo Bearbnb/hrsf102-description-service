@@ -1,0 +1,17 @@
+.container {
+  width: 65%;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin: auto;
+  color: #484848;
+}
+
+.name {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.livingSpace {
+  font-size: 12px;
+}

@@ -1,0 +1,13 @@
+.container {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 8px 8px 15px 15px;
+  color: #484848;
+}
+
+.highlight {
+  font-weight: 900;
+}
+
+.details {
+  font-weight: 200;
+}

@@ -1,21 +1,45 @@
 import React from 'react';
 import axios from 'axios';
 
+import { getRandomInt } from '../../../seedDatabase/helpers';
+
+import HomeHighlights from './HomeHighlights.jsx';
+import HeaderContainer from './HeaderContainer.jsx';
+import AmenitiesDisplay from './AmenitiesDisplay.jsx';
+import Description from './Description.jsx';
+import styles from '../../../styles/App.css';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      details: {
+        id: 0,
+        name: '',
+        ownerName: '',
+        location: '',
+        livingSpace: '',
+        guests: 0,
+        bedrooms: 0,
+        beds: 0,
+        baths: 0,
+        description: '',
+        homehighlights: [],
+        displayAmenities: [],
+        amenities: {},
+      },
+    };
   }
 
   componentWillMount() {
-    const listing = 1;
+    const listing = getRandomInt(1, 101);
     axios.get('/listings', {
       params: {
         id: listing,
       },
     }).then((res) => {
       this.setState({
-        description: res.data,
+        details: res.data,
       });
     }).catch((err) => {
       console.log(err);
@@ -23,9 +47,44 @@ class App extends React.Component {
   }
 
   render() {
+    const { details } = this.state;
+    const {
+      name,
+      ownerName,
+      location,
+      livingSpace,
+      guests,
+      bedrooms,
+      beds,
+      baths,
+      description,
+      homehighlights,
+      displayAmenities,
+      amenities,
+    } = details;
+
     return (
-      <div>
-        React App
+      <div className={styles.container}>
+        <HeaderContainer
+          guests={guests}
+          bedrooms={bedrooms}
+          beds={beds}
+          baths={baths}
+          name={name}
+          ownerName={ownerName}
+          location={location}
+          livingSpace={livingSpace}
+        />
+        <HomeHighlights
+          homehighlights={homehighlights}
+        />
+        <Description
+          description={description}
+        />
+        <AmenitiesDisplay
+          displayAmenities={displayAmenities}
+          amenities={amenities}
+        />
       </div>
     );
   }

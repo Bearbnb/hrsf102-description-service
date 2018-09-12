@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AmenitiesDisplay /> should render properly 1`] = `
+<div
+  className="container"
+>
+  <hr
+    className="pageBreak"
+  />
+  <div
+    className="title"
+  >
+    Amenities
+  </div>
+  <div
+    className="columns"
+  >
+    <div />
+    <div
+      className="rightColumn"
+    />
+  </div>
+  <button
+    className="button"
+    type="button"
+  >
+    Show all 
+    0
+     amenities
+  </button>
+</div>
+`;

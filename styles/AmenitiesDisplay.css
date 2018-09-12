@@ -1,0 +1,39 @@
+.container {
+  width: 65%;
+  margin: 30px auto 15px auto;
+  font-size: 18px;
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.rightColumn {
+  padding-right: 100px;
+}
+
+.amenity {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.pageBreak {
+  color: #808080;
+}
+
+.button {
+  background:none!important;
+  margin-top: 25px;
+  color: #6BB7B9;
+  border:none; 
+  padding:0!important;
+  font: inherit;
+  cursor: pointer;
+}
