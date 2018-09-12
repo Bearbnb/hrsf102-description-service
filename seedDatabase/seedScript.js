@@ -62,10 +62,10 @@ const generateDescriptions = () => {
     description.beds = getRandomInt(1, 9);
     description.baths = getRandomInt(1, 4);
     description.description = hipsterIpsum();
-    description.homeHighlights = [];
+    description.homehighlights = [];
     description.displayAmenities = displayAmenities;
 
-    generateProperties(homeHighlights, description.homeHighlights, 3);
+    generateProperties(homeHighlights, description.homehighlights, 3);
 
     descriptions.push(description);
   }

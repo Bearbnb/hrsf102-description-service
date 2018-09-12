@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from '../../../styles/ListingStats.css';
+
 const ListingStats = ({
   guests, bedrooms, beds, baths,
 }) => (
-  <div>
+  <div className={styles.container}>
     <div>{guests} guests {bedrooms} bedrooms {beds} beds {baths} baths</div>
   </div>
 );

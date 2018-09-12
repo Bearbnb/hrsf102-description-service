@@ -10,15 +10,6 @@ const Header = ({
       {name}
     </div>
     <div>
-      {baths} bath
-    </div>
-    <div>
-      {beds} bed
-    </div>
-    <div>
-      {ownerName}
-    </div>
-    <div>
       {location}
     </div>
     <div>

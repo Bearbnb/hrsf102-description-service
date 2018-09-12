@@ -27,7 +27,7 @@ const descriptionsSchema = new mongoose.Schema({
   bedrooms: Number,
   beds: Number,
   baths: Number,
-  homeHighlights: [{}],
+  homehighlights: [{}],
   description: String,
   displayAmenities: [String],
   amenities: amenitiesSchema,
