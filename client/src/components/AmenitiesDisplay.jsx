@@ -16,7 +16,6 @@ const AmenitiesDisplay = ({
   const column2 = displayAmenities.slice(3, 6);
 
   const amenitiesCount = countAmenities(amenities);
-  console.log(showModal, 'showModal in Amenities display');
 
   return (
     <div className={styles.container}>
@@ -46,10 +45,12 @@ const AmenitiesDisplay = ({
         onClick={() => showAmenities()}
       >Show all {amenitiesCount} amenities
       </button>
+
       <Amenities
         hideAmenities={hideAmenities}
         showModal={showModal}
       />
+
     </div>
   );
 };

@@ -1,19 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from '../../../styles/AmenitiesDisplay.css';
 
-const Amenities = ({ hideAmenities, showModal}) => {
-  console.log(showModal, 'showModal in Amenities');
-  const showHideClassName = showModal ? 'modal display-block' : 'modal display-none';
-  console.log(showHideClassName);
+const Amenities = ({ hideAmenities, showModal }) => {
+  let modal;
+
+  if (showModal) {
+    modal = (
+      <div>
+        DISPLAY
+      </div>
+    );
+  } else {
+    modal = (
+      <div>
+      
+      </div> 
+    );
+  }
 
   return (
-    <div className={showHideClassName}>
-      <section>
-        <button type="button" onClick={() => hideAmenities()}>
-          Close Modal
-        </button>
-      </section>
-    </div>
+    modal
   );
 };
 
