@@ -6,12 +6,15 @@ const Amenities = ({ amenities, hideAmenities, showModal }) => {
   const display = showModal ? styles.displayBlock : styles.displayNone;
 
   return (
-    <div
+    <div>
+      <div
       className={`${display} ${styles.modal}`}
       onClick={() => hideAmenities()}
-    >
-      <div className={styles.modalMain}>
-        <button type="button" onClick={() => hideAmenities()}>close</button>
+      >
+      </div>
+
+      <div className={`${display} ${styles.modalMain}`}>
+        Amenities
       </div>
     </div>
   );
