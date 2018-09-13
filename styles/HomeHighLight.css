@@ -5,9 +5,11 @@
 }
 
 .highlight {
-  font-weight: 900;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .details {
   font-weight: 200;
+  font-size: 14px;
 }

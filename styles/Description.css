@@ -1,6 +1,8 @@
 .container {
-  width: 40%;
+  max-width: 600px;
   margin: 20px auto 10px auto;
+  color: #686868;
+  font-size: 14px;
 }
 
 .button {
@@ -11,7 +13,7 @@
   padding:0!important;
   font: inherit;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 button:focus {
