@@ -16,6 +16,7 @@ const AmenitiesDisplay = ({
   const column2 = displayAmenities.slice(3, 6);
 
   const amenitiesCount = countAmenities(amenities);
+  console.log(amenities, 'initial amenities');
 
   return (
     <div className={styles.container}>
@@ -58,10 +59,16 @@ const AmenitiesDisplay = ({
 
 AmenitiesDisplay.propTypes = {
   displayAmenities: PropTypes.arrayOf(PropTypes.string),
+  showModal: PropTypes.bool,
+  showAmenities: PropTypes.func,
+  hideAmenities: PropTypes.func,
 };
 
 AmenitiesDisplay.defaultProps = {
   displayAmenities: [],
+  showModal: false,
+  showAmenities: () => {},
+  hideAmenities: () => {},
 };
 
 export default AmenitiesDisplay;

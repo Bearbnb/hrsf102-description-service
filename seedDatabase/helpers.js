@@ -32,19 +32,22 @@ const countAmenities = (amenities) => {
 const generateAmenitiesArray = (amenities) => {
   const amenitiesArray = [];
   const keys = Object.keys(amenities);
-  for (let i = 0; i < keys.length; i += 1) {
-    if (keys[i] !== 'notIncluded' && keys[i] !== 'id' && keys[i] !== '_id') {
-      amenitiesArray.push({
-        amenity: keys[i],
-        amenities: amenities[keys[i]],
-      });
+  if (keys.length > 0) {
+    for (let i = 0; i < keys.length; i += 1) {
+      if (keys[i] !== 'notIncluded' && keys[i] !== 'id' && keys[i] !== '_id') {
+        amenitiesArray.push({
+          amenity: keys[i],
+          amenities: amenities[keys[i]],
+        });
+      }
     }
+
+    amenitiesArray.push({
+      amenity: 'notIncluded',
+      amenities: amenities.notIncluded,
+    });
   }
 
-  amenitiesArray.push({
-    amenity: 'notIncluded',
-    amenities: amenities.notIncluded,
-  });
   return amenitiesArray;
 };
 

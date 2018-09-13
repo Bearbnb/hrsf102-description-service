@@ -1,24 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Amenity = ({ amenity }) => {
-  console.log(amenity);
+const Amenity = ({ availableAmenity }) => {
+  console.log(availableAmenity);
   return (
     <div>
-      Amenity
+      <h3>{availableAmenity.amenity}</h3>
+
     </div>
   );
 };
+// {availableAmenity.amenities.map((amenity => (
+//   <p>{amenity}</p>
+// )))}
+
 
 Amenity.propTypes = {
-  amenity: PropTypes.shape({
+  availableAmenity: PropTypes.shape({
     name: PropTypes.string,
     details: PropTypes.string,
   }),
 };
 
 Amenity.defaultProps = {
-  amenity: {},
+  availableAmenity: {
+    amenity: 'basics',
+    amenities: [{ name: 'Heating', details: '' }],
+  },
 };
 
 export default Amenity;

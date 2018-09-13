@@ -7,21 +7,20 @@ import { generateAmenitiesArray } from '../../../seedDatabase/helpers';
 import styles from '../../../styles/Amenities.css';
 
 const Amenities = ({ amenities, hideAmenities, showModal }) => {
-  console.log(amenities);
   const display = showModal ? styles.displayBlock : styles.displayNone;
   const amenitiesArray = generateAmenitiesArray(amenities);
+  console.log(amenitiesArray.length);
 
   return (
     <div>
       <div
         className={`${display} ${styles.modal}`}
         onClick={() => hideAmenities()}
-        >
-      </div>
+      />
 
       <div className={`${display} ${styles.modalMain}`}>
         <h1>Amenities</h1>
-        {amenitiesArray.map((amenity, i) => <Amenity key={i} amenity={amenity} />)}
+        {amenitiesArray.map((amenity, i) => <Amenity key={i} availableAmenity={amenity} />)}
       </div>
     </div>
   );
