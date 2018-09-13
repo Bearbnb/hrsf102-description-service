@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Amenity = ({ availableAmenity }) => {
-  console.log(availableAmenity);
   return (
     <div>
       <h3>{availableAmenity.amenity}</h3>
+      <hr />
       {availableAmenity.amenities.map((amenity => (
         <p>{amenity.name}</p>
       )))}

@@ -8,19 +8,27 @@ import styles from '../../../styles/Amenities.css';
 
 const Amenities = ({ amenities, hideAmenities, showModal }) => {
   const display = showModal ? styles.displayBlock : styles.displayNone;
-  const amenitiesArray = generateAmenitiesArray(amenities);
 
+  if (showModal) {
+    document.querySelector('body').style.overflow = 'hidden';
+  } else {
+    document.querySelector('body').style.overflow = null;
+  }
+
+  const amenitiesArray = generateAmenitiesArray(amenities);
   return (
     <div>
       <div
-        className={`${display} ${styles.modal}`}
+        className={`${display} ${styles.modalBackdrop}`}
         onClick={() => hideAmenities()}
-      />
+      >
+      </div>
 
       <div className={`${display} ${styles.modalMain}`}>
         <h1>Amenities</h1>
         {amenitiesArray.map(amenity => <Amenity key={amenity.id} availableAmenity={amenity} />)}
       </div>
+
     </div>
   );
 };

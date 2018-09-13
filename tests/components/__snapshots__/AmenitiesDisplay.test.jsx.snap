@@ -31,7 +31,7 @@ exports[`<AmenitiesDisplay /> should render properly 1`] = `
   </button>
   <Amenities
     amenities={Object {}}
-    hideAmenities={null}
+    hideAmenities={[Function]}
     showModal={false}
   />
 </div>

@@ -1,20 +1,22 @@
-.modal {
+.modalBackdrop {
   position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  width:100%;
-  height: 100%;
+  height: auto;
   background: rgba(255, 255, 255, 0.6);
 }
 
 .modalMain {
-  position:fixed;
+  position: fixed;
   background: white;
-  width: 40%;
+  width: 50%;
   max-height: 100vh;
-  overflow: auto;
+  overflow-y: auto;
   top: 50%;
   left: 50%;
+  z-index: 1041;
   transform: translate(-50%,-50%);
   box-shadow: 0 0 7px #C8C8C8;
 }

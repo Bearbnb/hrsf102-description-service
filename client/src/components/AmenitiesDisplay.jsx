@@ -16,7 +16,6 @@ const AmenitiesDisplay = ({
   const column2 = displayAmenities.slice(3, 6);
 
   const amenitiesCount = countAmenities(amenities);
-  console.log(amenities, 'initial amenities');
 
   return (
     <div className={styles.container}>
