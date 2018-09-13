@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from './Header.jsx';
 import ListingStats from './ListingStats.jsx';
+import Owner from './Owner.jsx';
 
 const HeaderContainer = ({
-  guests, bedrooms, beds, baths, name, ownerName, location, livingSpace,
+  guests, bedrooms, beds, baths, name, ownerName, ownerPicture, location, livingSpace,
 }) => (
   <div>
     <Header
@@ -12,12 +13,19 @@ const HeaderContainer = ({
       name={name}
       location={location}
     />
+
     <ListingStats
       guests={guests}
       bedrooms={bedrooms}
       beds={beds}
       baths={baths}
     />
+
+    <Owner
+      ownerName={ownerName}
+      ownerPicture={ownerPicture}
+    />
+
   </div>
 );
 

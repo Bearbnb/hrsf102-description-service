@@ -21,6 +21,7 @@ const descriptionsSchema = new mongoose.Schema({
   id: Number,
   name: String,
   ownerName: String,
+  ownerPicture: String,
   location: String,
   livingSpace: String,
   guests: Number,

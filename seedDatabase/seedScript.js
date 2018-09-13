@@ -55,6 +55,7 @@ const generateDescriptions = () => {
     description.id = i;
     description.name = generateListingName();
     description.ownerName = `${faker.name.firstName()} ${faker.name.lastName()}`;
+    description.ownerPicture = `https://s3-us-west-1.amazonaws.com/airbnb-owner-photos/airbnb${i}.jpg`;
     description.location = faker.address.city();
     description.livingSpace = places[getRandomInt(0, places.length)];
     description.guests = getRandomInt(4, 10);

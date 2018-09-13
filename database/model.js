@@ -6,6 +6,7 @@ const addDescription = (listing) => {
     id: listing.id,
     name: listing.name,
     ownerName: listing.ownerName,
+    ownerPicture: listing.ownerPicture,
     location: listing.location,
     livingSpace: listing.livingSpace,
     guests: listing.guests,

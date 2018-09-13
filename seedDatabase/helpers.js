@@ -51,6 +51,7 @@ const generateAmenitiesArray = (amenities) => {
   return amenitiesArray;
 };
 
+
 module.exports = {
   getRandomInt,
   generateProperties,
