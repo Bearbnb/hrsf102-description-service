@@ -6,14 +6,12 @@ const Amenity = ({ availableAmenity }) => {
   return (
     <div>
       <h3>{availableAmenity.amenity}</h3>
-
+      {availableAmenity.amenities.map((amenity => (
+        <p>{amenity.name}</p>
+      )))}
     </div>
   );
 };
-// {availableAmenity.amenities.map((amenity => (
-//   <p>{amenity}</p>
-// )))}
-
 
 Amenity.propTypes = {
   availableAmenity: PropTypes.shape({

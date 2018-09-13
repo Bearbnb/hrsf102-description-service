@@ -9,7 +9,6 @@ import styles from '../../../styles/Amenities.css';
 const Amenities = ({ amenities, hideAmenities, showModal }) => {
   const display = showModal ? styles.displayBlock : styles.displayNone;
   const amenitiesArray = generateAmenitiesArray(amenities);
-  console.log(amenitiesArray.length);
 
   return (
     <div>
@@ -20,7 +19,7 @@ const Amenities = ({ amenities, hideAmenities, showModal }) => {
 
       <div className={`${display} ${styles.modalMain}`}>
         <h1>Amenities</h1>
-        {amenitiesArray.map((amenity, i) => <Amenity key={i} availableAmenity={amenity} />)}
+        {amenitiesArray.map(amenity => <Amenity key={amenity.id} availableAmenity={amenity} />)}
       </div>
     </div>
   );
