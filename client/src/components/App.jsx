@@ -17,6 +17,7 @@ class App extends React.Component {
         id: 0,
         name: '',
         ownerName: '',
+        ownerPicture: '',
         location: '',
         livingSpace: '',
         guests: 0,
@@ -67,6 +68,7 @@ class App extends React.Component {
     const {
       name,
       ownerName,
+      ownerPicture,
       location,
       livingSpace,
       guests,
@@ -89,6 +91,7 @@ class App extends React.Component {
           baths={baths}
           name={name}
           ownerName={ownerName}
+          ownerPicture={ownerPicture}
           location={location}
           livingSpace={livingSpace}
         />
