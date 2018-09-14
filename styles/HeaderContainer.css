@@ -1,5 +1,5 @@
 .wrapper {
   display: grid;
   grid-template-columns: 530px 70px;
-  grid-template-rows: 40px 80px 60px
+  grid-template-rows: 40px 100px 40px
 }
