@@ -15,6 +15,7 @@ const addDescription = (listing) => {
     baths: listing.baths,
     homehighlights: listing.homehighlights,
     description: listing.description,
+    descriptionExtended: listing.descriptionExtended,
     displayAmenities: listing.displayAmenities,
     amenities: listing.amenities,
   }).save()

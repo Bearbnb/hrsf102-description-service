@@ -7,7 +7,7 @@ import HomeHighlights from './HomeHighlights.jsx';
 import HeaderContainer from './HeaderContainer.jsx';
 import AmenitiesDisplay from './AmenitiesDisplay.jsx';
 import Description from './Description.jsx';
-import DescriptionExtended from './DescriptionExtended';
+import DescriptionExtended from './DescriptionExtended.jsx';
 
 import styles from '../../../styles/App.css';
 
@@ -69,6 +69,7 @@ class App extends React.Component {
 
   render() {
     const { details } = this.state;
+    const { showDescriptionExtended } = this.state;
     const {
       name,
       ownerName,
@@ -89,6 +90,20 @@ class App extends React.Component {
 
     if (ownerName === '') {
       return <div />;
+    }
+
+    let longDescription;
+
+    if (showDescriptionExtended) {
+      longDescription = (
+        <DescriptionExtended
+          descriptionExtended={descriptionExtended}
+        />
+      );
+    } else {
+      longDescription = (
+        <div />
+      );
     }
 
     return (

@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Amenity = ({ availableAmenity }) => {
-  return (
-    <div>
-      <h3>{availableAmenity.amenity}</h3>
-      <hr />
-      {availableAmenity.amenities.map((amenity => (
-        <p>{amenity.name}</p>
-      )))}
-    </div>
-  );
-};
+const Amenity = ({ availableAmenity }) => (
+  <div>
+    <h3>{availableAmenity.amenity}</h3>
+    <hr />
+    {availableAmenity.amenities.map((amenity => (
+      <p>{amenity.name}</p>
+    )))}
+  </div>
+);
 
 Amenity.propTypes = {
   availableAmenity: PropTypes.shape({
