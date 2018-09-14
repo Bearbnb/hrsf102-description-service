@@ -1,7 +1,5 @@
 .container {
-  /* display: flex;
-  flex-direction: column; */
+  max-width: 600px;
+  margin: auto;
   font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  /* border-radius: 5px;
-  box-shadow: 1px 1px 1px #C8C8C8; */
 }

@@ -1,0 +1,23 @@
+.container {
+  max-width: 64px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.imgCircle {
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.name {
+  margin: 0 auto 0 auto;
+  text-align: center;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  color: #808080;
+}

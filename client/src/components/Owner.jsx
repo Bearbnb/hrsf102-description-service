@@ -1,10 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from '../../../styles/Owner.css';
+
 const Owner = ({ ownerName, ownerPicture }) => (
-  <div>
-    <div>{ownerName}</div>
-    <img src={ownerPicture} alt="" />
+  <div className={styles.container}>
+    <img
+      className={styles.imgCircle}
+      src={ownerPicture}
+      alt=""
+    />
+    <div className={styles.name}>{ownerName.split(' ')[0]}</div>
   </div>
 );
 
