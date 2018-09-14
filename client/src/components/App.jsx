@@ -7,6 +7,8 @@ import HomeHighlights from './HomeHighlights.jsx';
 import HeaderContainer from './HeaderContainer.jsx';
 import AmenitiesDisplay from './AmenitiesDisplay.jsx';
 import Description from './Description.jsx';
+import DescriptionExtended from './DescriptionExtended';
+
 import styles from '../../../styles/App.css';
 
 class App extends React.Component {
@@ -25,11 +27,13 @@ class App extends React.Component {
         beds: 0,
         baths: 0,
         description: '',
+        descriptionExtended: '',
         homehighlights: [],
         displayAmenities: [],
         amenities: {},
       },
       showModal: false,
+      showDescriptionExtended: false,
     };
     this.showAmenities = this.showAmenities.bind(this);
     this.hideAmenities = this.hideAmenities.bind(this);
@@ -76,6 +80,7 @@ class App extends React.Component {
       beds,
       baths,
       description,
+      descriptionExtended,
       homehighlights,
       displayAmenities,
       amenities,
@@ -104,6 +109,9 @@ class App extends React.Component {
         />
         <Description
           description={description}
+        />
+        <DescriptionExtended
+          descriptionExtended={descriptionExtended}
         />
         <AmenitiesDisplay
           displayAmenities={displayAmenities}

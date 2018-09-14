@@ -17,7 +17,9 @@ exports[`<Header /> should render properly 1`] = `
   >
     Cozy thing
   </div>
-  <div>
+  <div
+    className="location"
+  >
     San Francisco
   </div>
 </div>
