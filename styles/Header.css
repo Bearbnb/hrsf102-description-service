@@ -13,4 +13,9 @@
 
 .livingSpace {
   font-size: 12px;
+  font-weight: 600;
+}
+
+.location {
+  font-weight: 400;
 }
