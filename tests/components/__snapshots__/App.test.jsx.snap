@@ -13,6 +13,7 @@ exports[`<App /> should render properly 1`] = `
     location=""
     name=""
     ownerName=""
+    ownerPicture=""
   />
   <HomeHighlights
     homehighlights={Array []}

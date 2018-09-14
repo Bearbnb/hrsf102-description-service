@@ -1,12 +1,51 @@
 .container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 100px 130px 100px 100px;
   max-width: 500px;
   color: #484848;
   grid-column-start: 1;
   grid-row-start: 3;
 }
 
-.stat {
-  margin-right: 20px;
+.statOne {
+  display: flex;
+  flex-direction: row;
+  grid-column-start: 1;
+}
+
+.statTwo {
+  display: flex;
+  flex-direction: row;
+  grid-column-start: 2;
+}
+
+.statThree {
+  display: flex;
+  flex-direction: row;
+  grid-column-start: 3;
+}
+
+.statFour {
+  display: flex;
+  flex-direction: row;
+  grid-column-start: 4;
+}
+
+span {
+  margin-top: 0;
+  margin-bottom: auto;
+}
+
+img { 
+  height: 20px;
+  margin-right: 5px;
+}
+
+.img3 {
+  margin-top: 2px;
+  height: 18px;
+}
+
+span {
+  margin-top: 0px;
 }
