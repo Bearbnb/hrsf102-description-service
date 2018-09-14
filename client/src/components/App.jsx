@@ -82,6 +82,10 @@ class App extends React.Component {
     } = details;
     const { showModal } = this.state;
 
+    if (ownerName === '') {
+      return <div />;
+    }
+
     return (
       <div className={styles.container}>
         <HeaderContainer
