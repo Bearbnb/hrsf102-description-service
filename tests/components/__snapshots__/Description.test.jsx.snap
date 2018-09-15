@@ -7,6 +7,7 @@ exports[`<Description /> should render properly 1`] = `
   <p />
   <button
     className="button"
+    onClick={[Function]}
     type="button"
   >
     Read more about the space
