@@ -70,7 +70,7 @@ const generateDescriptions = () => {
     description.beds = getRandomInt(2, 9);
     description.baths = getRandomInt(2, 4);
     description.description = descriptionIpsum();
-    description.descriptionExtended = descriptionExtendedIpsum();
+    description.descriptionExtended = descriptionExtendedIpsum;
     description.homehighlights = [];
     description.displayAmenities = displayAmenities;
 

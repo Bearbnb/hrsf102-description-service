@@ -21,8 +21,7 @@ const Amenities = ({ amenities, hideAmenities, showModal }) => {
       <div
         className={`${display} ${styles.modalBackdrop}`}
         onClick={() => hideAmenities()}
-      >
-      </div>
+      />
 
       <div className={`${display} ${styles.modalMain}`}>
         <h1>Amenities</h1>

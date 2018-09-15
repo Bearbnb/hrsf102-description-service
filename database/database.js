@@ -30,7 +30,7 @@ const descriptionsSchema = new mongoose.Schema({
   baths: Number,
   homehighlights: [{}],
   description: String,
-  descriptionExtended: String,
+  descriptionExtended: {},
   displayAmenities: [String],
   amenities: amenitiesSchema,
 });

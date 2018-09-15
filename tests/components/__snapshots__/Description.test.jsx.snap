@@ -4,7 +4,7 @@ exports[`<Description /> should render properly 1`] = `
 <div
   className="container"
 >
-  <div />
+  <p />
   <button
     className="button"
     type="button"

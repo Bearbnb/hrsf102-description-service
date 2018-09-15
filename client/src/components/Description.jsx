@@ -1,11 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import styles from '../../../styles/Description.css';
+
 
 const Description = ({ description }) => (
   <div className={styles.container}>
-    <div>
+    <p>
       {description}
-    </div>
+    </p>
     <button
       className={styles.button}
       type="button"
@@ -14,5 +17,13 @@ const Description = ({ description }) => (
 
   </div>
 );
+
+Description.propTypes = {
+  description: PropTypes.string,
+};
+
+Description.defaultProps = {
+  description: '',
+};
 
 export default Description;
