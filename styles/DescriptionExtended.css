@@ -10,6 +10,7 @@
 }
 
 .fadeOut {
+  display: none;
   animation: fadeOut 0.5s ease-in both;
 }
 
@@ -24,13 +25,16 @@
 	}
 }
 
-@keyframes fadeOut {
-	from {
+/* @keyframes fadeOut {
+	0% {
     opacity: 1;
 		transform: translate3d(0, 0, 0);
 	}
-	to {
+	100% {
 		opacity: 0;
-		transform: translate3d(0, 1%, 0);
-	}
-}
+		transform: translate3d(0, -1%, 0);
+  }
+  100% {
+    display: none;
+  }
+} */

@@ -5,6 +5,7 @@ exports[`<Description /> should render properly 1`] = `
   className="container"
 >
   <p />
+  <DescriptionExtended />
   <button
     className="button"
     onClick={[Function]}

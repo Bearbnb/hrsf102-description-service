@@ -5,20 +5,21 @@ import DescriptionExtended from './DescriptionExtended.jsx';
 
 import styles from '../../../styles/Description.css';
 
-const Description = ({ description, descriptionExtended, showDescription, showDescriptionExtended, hideDescription }) => {
-
-  let longDescription;
+const Description = ({ 
+  description,
+  descriptionExtended,
+  showDescription,
+  showDescriptionExtended,
+  hideDescription,
+}) => {
+  let expandDescriptionButton;
 
   if (showDescriptionExtended) {
-    longDescription = (
-      <DescriptionExtended
-        hideDescription={hideDescription}
-        descriptionExtended={descriptionExtended}
-        showDescriptionExtended={showDescriptionExtended}
-      />
+    expandDescriptionButton = (
+      <div />
     );
   } else {
-    longDescription = (
+    expandDescriptionButton = (
       <button
         className={styles.button}
         type="button"
@@ -27,12 +28,18 @@ const Description = ({ description, descriptionExtended, showDescription, showDe
       </button>
     );
   }
+
   return (
     <div className={styles.container}>
       <p>
         {description}
       </p>
-      {longDescription}
+      <DescriptionExtended
+        hideDescription={hideDescription}
+        descriptionExtended={descriptionExtended}
+        showDescriptionExtended={showDescriptionExtended}
+      />
+      {expandDescriptionButton}
     </div>
   );
 };

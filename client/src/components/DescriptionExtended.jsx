@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 
 import styles from '../../../styles/DescriptionExtended.css';
 
-const DescriptionExtended = ({ descriptionExtended, hideDescription, showDescriptionExtended }) => {
+const DescriptionExtended = ({
+  descriptionExtended, 
+  hideDescription, 
+  showDescriptionExtended,
+}) => {
   const bullets = Object.keys(descriptionExtended);
-  
-  console.log(showDescriptionExtended);
 
   const fade = showDescriptionExtended ? styles.fadeIn : styles.fadeOut;
 
