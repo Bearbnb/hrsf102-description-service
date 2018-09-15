@@ -7,7 +7,6 @@ import HomeHighlights from './HomeHighlights.jsx';
 import HeaderContainer from './HeaderContainer.jsx';
 import AmenitiesDisplay from './AmenitiesDisplay.jsx';
 import Description from './Description.jsx';
-import DescriptionExtended from './DescriptionExtended.jsx';
 
 import styles from '../../../styles/App.css';
 
@@ -37,6 +36,8 @@ class App extends React.Component {
     };
     this.showAmenities = this.showAmenities.bind(this);
     this.hideAmenities = this.hideAmenities.bind(this);
+    this.showDescription = this.showDescription.bind(this);
+    this.hideDescription = this.hideDescription.bind(this);
   }
 
   componentWillMount() {
@@ -67,6 +68,18 @@ class App extends React.Component {
     });
   }
 
+  showDescription() {
+    this.setState({
+      showDescriptionExtended: true,
+    });
+  }
+
+  hideDescription() {
+    this.setState({
+      showDescriptionExtended: false,
+    });
+  }
+
   render() {
     const { details } = this.state;
     const { showDescriptionExtended } = this.state;
@@ -91,21 +104,6 @@ class App extends React.Component {
     if (ownerName === '') {
       return <div />;
     }
-
-    let longDescription;
-
-    if (showDescriptionExtended) {
-      longDescription = (
-        <DescriptionExtended
-          descriptionExtended={descriptionExtended}
-        />
-      );
-    } else {
-      longDescription = (
-        <div />
-      );
-    }
-
     return (
       <div className={styles.container}>
         <HeaderContainer
@@ -124,9 +122,10 @@ class App extends React.Component {
         />
         <Description
           description={description}
-        />
-        <DescriptionExtended
           descriptionExtended={descriptionExtended}
+          showDescription={this.showDescription}
+          hideDescription={this.hideDescription}
+          showDescriptionExtended={showDescriptionExtended}
         />
         <AmenitiesDisplay
           displayAmenities={displayAmenities}

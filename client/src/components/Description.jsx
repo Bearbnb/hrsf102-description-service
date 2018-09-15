@@ -1,22 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import DescriptionExtended from './DescriptionExtended.jsx';
+
 import styles from '../../../styles/Description.css';
 
-
-const Description = ({ description }) => (
-  <div className={styles.container}>
-    <p>
-      {description}
-    </p>
-    <button
-      className={styles.button}
-      type="button"
-    >Read more about the space
-    </button>
-
-  </div>
-);
+const Description = ({ description, descriptionExtended, showDescription, showDescriptionExtended, hideDescription }) => {
+  let longDescription;
+  if (showDescriptionExtended) {
+    longDescription = (
+      <DescriptionExtended
+        descriptionExtended={descriptionExtended}
+        hideDescription={hideDescription}
+      />
+    );
+  } else {
+    longDescription = (
+      <button
+        className={styles.button}
+        type="button"
+        onClick={() => showDescription()}
+      >Read more about the space
+      </button>
+    );
+  }
+  return (
+    <div className={styles.container}>
+      <p>
+        {description}
+      </p>
+      {longDescription}
+    </div>
+  );
+};
 
 Description.propTypes = {
   description: PropTypes.string,
