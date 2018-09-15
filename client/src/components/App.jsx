@@ -75,6 +75,7 @@ class App extends React.Component {
   }
 
   hideDescription() {
+    console.log('hidden');
     this.setState({
       showDescriptionExtended: false,
     });

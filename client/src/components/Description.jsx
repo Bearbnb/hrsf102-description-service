@@ -6,12 +6,15 @@ import DescriptionExtended from './DescriptionExtended.jsx';
 import styles from '../../../styles/Description.css';
 
 const Description = ({ description, descriptionExtended, showDescription, showDescriptionExtended, hideDescription }) => {
+
   let longDescription;
+
   if (showDescriptionExtended) {
     longDescription = (
       <DescriptionExtended
-        descriptionExtended={descriptionExtended}
         hideDescription={hideDescription}
+        descriptionExtended={descriptionExtended}
+        showDescriptionExtended={showDescriptionExtended}
       />
     );
   } else {

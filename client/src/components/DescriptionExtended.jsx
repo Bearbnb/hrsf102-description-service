@@ -3,10 +3,15 @@ import PropTypes from 'prop-types';
 
 import styles from '../../../styles/DescriptionExtended.css';
 
-const DescriptionExtended = ({ descriptionExtended, hideDescription }) => {
+const DescriptionExtended = ({ descriptionExtended, hideDescription, showDescriptionExtended }) => {
   const bullets = Object.keys(descriptionExtended);
+  
+  console.log(showDescriptionExtended);
+
+  const fade = showDescriptionExtended ? styles.fadeIn : styles.fadeOut;
+
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${fade}`}>
       {bullets.map(bullet => (
         <div>
           <span>{bullet}</span>
