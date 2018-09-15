@@ -22,11 +22,17 @@ exports[`<AmenitiesDisplay /> should render properly 1`] = `
   </div>
   <button
     className="button"
+    onClick={[Function]}
     type="button"
   >
     Show all 
     0
      amenities
   </button>
+  <Amenities
+    amenities={Object {}}
+    hideAmenities={[Function]}
+    showModal={false}
+  />
 </div>
 `;

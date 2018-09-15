@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HeaderContainer /> should render properly 1`] = `
-<div>
+<div
+  className="wrapper"
+>
   <Header
     baths={0}
     beds={0}
@@ -15,6 +17,10 @@ exports[`<HeaderContainer /> should render properly 1`] = `
     bedrooms={0}
     beds={0}
     guests={0}
+  />
+  <Owner
+    ownerName="John Smith"
+    ownerPicture="https://s3-us-west-1.amazonaws.com/airbnb-owner-photos/airbnb1.jpg"
   />
 </div>
 `;

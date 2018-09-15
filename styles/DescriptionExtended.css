@@ -1,0 +1,40 @@
+.container {
+  font-size: 16px;
+  letter-spacing: normal;
+  font-weight: normal;
+  line-height: 22px;
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s ease-in both;
+}
+
+.fadeOut {
+  display: none;
+  animation: fadeOut 0.5s ease-in both;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -1%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+/* @keyframes fadeOut {
+	0% {
+    opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+	100% {
+		opacity: 0;
+		transform: translate3d(0, -1%, 0);
+  }
+  100% {
+    display: none;
+  }
+} */

@@ -1,7 +1,7 @@
 .container {
-  width: 65%;
+  max-width: 600px;
   margin: 30px auto 15px auto;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .columns {
@@ -20,8 +20,8 @@
 }
 
 .title {
-  font-weight: 900;
-  font-size: 22px;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .pageBreak {
@@ -29,11 +29,11 @@
 }
 
 .button {
-  background:none!important;
+  background: none!important;
   margin-top: 25px;
   color: #6BB7B9;
-  border:none; 
-  padding:0!important;
+  border: none; 
+  padding: 0!important;
   font: inherit;
   cursor: pointer;
 }

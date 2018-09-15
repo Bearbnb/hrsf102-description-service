@@ -7,10 +7,31 @@ const ListingStats = ({
   guests, bedrooms, beds, baths,
 }) => (
   <div className={styles.container}>
-    <div className={styles.stat}>{guests} guests</div>
-    <div className={styles.stat}>{bedrooms} bedrooms</div>
-    <div className={styles.stat}>{beds} beds</div>
-    <div className={styles.stat}>{baths} baths</div>
+
+    <div className={styles.statOne}>
+      <img alt="" src="https://s3-us-west-1.amazonaws.com/airbnb-owner-photos/guests.png" />
+      <div>{guests} guests</div>
+    </div>
+
+    <div className={styles.statTwo}>
+      <img alt="" src="https://s3-us-west-1.amazonaws.com/airbnb-owner-photos/living.png" />
+      <div>{bedrooms} bedrooms</div>
+    </div>
+
+    <div className={styles.statThree}>
+      <img 
+        className={styles.img3}
+        alt=""
+        src="https://s3-us-west-1.amazonaws.com/airbnb-owner-photos/beds.png" />
+      <div>{beds} beds</div>
+    </div>
+
+    <div className={styles.statFour}>
+      <img 
+        alt=""
+        src="https://s3-us-west-1.amazonaws.com/airbnb-owner-photos/bath.png" />
+      <div>{baths} baths</div>
+    </div>
   </div>
 );
 

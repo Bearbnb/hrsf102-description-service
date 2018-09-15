@@ -4,9 +4,11 @@ exports[`<Description /> should render properly 1`] = `
 <div
   className="container"
 >
-  <div />
+  <p />
+  <DescriptionExtended />
   <button
     className="button"
+    onClick={[Function]}
     type="button"
   >
     Read more about the space

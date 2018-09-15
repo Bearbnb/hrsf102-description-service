@@ -1,28 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<App /> should render properly 1`] = `
-<div
-  className="container"
->
-  <HeaderContainer
-    baths={0}
-    bedrooms={0}
-    beds={0}
-    guests={0}
-    livingSpace=""
-    location=""
-    name=""
-    ownerName=""
-  />
-  <HomeHighlights
-    homehighlights={Array []}
-  />
-  <Description
-    description=""
-  />
-  <AmenitiesDisplay
-    amenities={Object {}}
-    displayAmenities={Array []}
-  />
-</div>
-`;
+exports[`<App /> should render properly 1`] = `<div />`;

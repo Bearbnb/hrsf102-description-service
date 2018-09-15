@@ -1,23 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import Header from './Header.jsx';
 import ListingStats from './ListingStats.jsx';
+import Owner from './Owner.jsx';
+
+import styles from '../../../styles/HeaderContainer.css';
 
 const HeaderContainer = ({
-  guests, bedrooms, beds, baths, name, ownerName, location, livingSpace,
+  guests, bedrooms, beds, baths, name, ownerName, ownerPicture, location, livingSpace,
 }) => (
-  <div>
+  <div className={styles.wrapper}>
+
     <Header
       livingSpace={livingSpace}
       name={name}
       location={location}
     />
+
     <ListingStats
       guests={guests}
       bedrooms={bedrooms}
       beds={beds}
       baths={baths}
     />
+
+    <Owner
+      ownerName={ownerName}
+      ownerPicture={ownerPicture}
+    />
+
   </div>
 );
 
@@ -27,6 +39,7 @@ HeaderContainer.propTypes = {
   beds: PropTypes.number,
   baths: PropTypes.number,
   ownerName: PropTypes.string,
+  ownerPicture: PropTypes.string,
   name: PropTypes.string,
   location: PropTypes.string,
   livingSpace: PropTypes.string,
@@ -38,7 +51,8 @@ HeaderContainer.defaultProps = {
   bedrooms: 0,
   beds: 0,
   baths: 0,
-  ownerName: 'Charlie P',
+  ownerName: 'John Smith',
+  ownerPicture: 'https://s3-us-west-1.amazonaws.com/airbnb-owner-photos/airbnb1.jpg',
   name: 'Cozy thing',
   location: 'San Francisco',
   livingSpace: 'Apartment',

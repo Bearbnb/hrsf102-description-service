@@ -1,13 +1,15 @@
 .container {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
   margin: 8px 8px 15px 15px;
   color: #484848;
 }
 
 .highlight {
-  font-weight: 900;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .details {
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 14px;
 }

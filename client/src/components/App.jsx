@@ -7,6 +7,7 @@ import HomeHighlights from './HomeHighlights.jsx';
 import HeaderContainer from './HeaderContainer.jsx';
 import AmenitiesDisplay from './AmenitiesDisplay.jsx';
 import Description from './Description.jsx';
+
 import styles from '../../../styles/App.css';
 
 class App extends React.Component {
@@ -17,6 +18,7 @@ class App extends React.Component {
         id: 0,
         name: '',
         ownerName: '',
+        ownerPicture: '',
         location: '',
         livingSpace: '',
         guests: 0,
@@ -24,11 +26,18 @@ class App extends React.Component {
         beds: 0,
         baths: 0,
         description: '',
+        descriptionExtended: '',
         homehighlights: [],
         displayAmenities: [],
         amenities: {},
       },
+      showModal: false,
+      showDescriptionExtended: false,
     };
+    this.showAmenities = this.showAmenities.bind(this);
+    this.hideAmenities = this.hideAmenities.bind(this);
+    this.showDescription = this.showDescription.bind(this);
+    this.hideDescription = this.hideDescription.bind(this);
   }
 
   componentWillMount() {
@@ -46,11 +55,39 @@ class App extends React.Component {
     });
   }
 
+  showAmenities() {
+    this.setState({
+      showModal: true,
+    });
+  }
+
+  hideAmenities() {
+    console.log(this);
+    this.setState({
+      showModal: false,
+    });
+  }
+
+  showDescription() {
+    this.setState({
+      showDescriptionExtended: true,
+    });
+  }
+
+  hideDescription() {
+    console.log('hidden');
+    this.setState({
+      showDescriptionExtended: false,
+    });
+  }
+
   render() {
     const { details } = this.state;
+    const { showDescriptionExtended } = this.state;
     const {
       name,
       ownerName,
+      ownerPicture,
       location,
       livingSpace,
       guests,
@@ -58,11 +95,16 @@ class App extends React.Component {
       beds,
       baths,
       description,
+      descriptionExtended,
       homehighlights,
       displayAmenities,
       amenities,
     } = details;
+    const { showModal } = this.state;
 
+    if (ownerName === '') {
+      return <div />;
+    }
     return (
       <div className={styles.container}>
         <HeaderContainer
@@ -72,6 +114,7 @@ class App extends React.Component {
           baths={baths}
           name={name}
           ownerName={ownerName}
+          ownerPicture={ownerPicture}
           location={location}
           livingSpace={livingSpace}
         />
@@ -80,10 +123,17 @@ class App extends React.Component {
         />
         <Description
           description={description}
+          descriptionExtended={descriptionExtended}
+          showDescription={this.showDescription}
+          hideDescription={this.hideDescription}
+          showDescriptionExtended={showDescriptionExtended}
         />
         <AmenitiesDisplay
           displayAmenities={displayAmenities}
           amenities={amenities}
+          showModal={showModal}
+          showAmenities={this.showAmenities}
+          hideAmenities={this.hideAmenities}
         />
       </div>
     );

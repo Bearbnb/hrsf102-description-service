@@ -1,7 +1,14 @@
 const faker = require('faker');
 
 const { addDescription } = require('../database/model.js');
-const { getRandomInt, generateProperties, descriptionIpsum } = require('./helpers.js');
+
+const {
+  getRandomInt,
+  generateProperties,
+  descriptionIpsum,
+  descriptionExtendedIpsum,
+} = require('./helpers.js');
+
 const {
   basics,
   dining,
@@ -55,6 +62,7 @@ const generateDescriptions = () => {
     description.id = i;
     description.name = generateListingName();
     description.ownerName = `${faker.name.firstName()} ${faker.name.lastName()}`;
+    description.ownerPicture = `https://s3-us-west-1.amazonaws.com/airbnb-owner-photos/airbnb${i}.jpg`;
     description.location = faker.address.city();
     description.livingSpace = places[getRandomInt(0, places.length)];
     description.guests = getRandomInt(4, 10);
@@ -62,6 +70,7 @@ const generateDescriptions = () => {
     description.beds = getRandomInt(2, 9);
     description.baths = getRandomInt(2, 4);
     description.description = descriptionIpsum();
+    description.descriptionExtended = descriptionExtendedIpsum;
     description.homehighlights = [];
     description.displayAmenities = displayAmenities;
 

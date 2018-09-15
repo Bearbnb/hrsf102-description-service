@@ -6,6 +6,7 @@ const addDescription = (listing) => {
     id: listing.id,
     name: listing.name,
     ownerName: listing.ownerName,
+    ownerPicture: listing.ownerPicture,
     location: listing.location,
     livingSpace: listing.livingSpace,
     guests: listing.guests,
@@ -14,6 +15,7 @@ const addDescription = (listing) => {
     baths: listing.baths,
     homehighlights: listing.homehighlights,
     description: listing.description,
+    descriptionExtended: listing.descriptionExtended,
     displayAmenities: listing.displayAmenities,
     amenities: listing.amenities,
   }).save()
