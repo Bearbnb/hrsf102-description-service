@@ -14,7 +14,7 @@ const amenitiesSchema = new mongoose.Schema({
   guestAccess: [{}],
   bedAndBath: [{}],
   safetyFeatures: [{}],
-  notIncluded: [String],
+  notIncluded: [{}],
 });
 
 const descriptionsSchema = new mongoose.Schema({
