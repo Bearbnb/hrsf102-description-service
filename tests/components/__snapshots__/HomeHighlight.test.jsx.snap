@@ -16,17 +16,28 @@ exports[`<HomeHighlight /> should render properly 1`] = `
     Easily check yourself in with the lockbox.
   </span>
   <div
-    className="thumbsContainer"
+    className="helpful"
   >
-    <div>
-      Helpful 
+    <button
+      className="button"
+      type="button"
+    >
+      Helpful
       <i
         className="far fa-thumbs-up"
       />
-    </div>
-    <div>
-      Not helpful
-    </div>
+    </button>
+    <span
+      className="interpunct"
+    >
+       · 
+    </span>
+    <button
+      className="button"
+      type="button"
+    >
+      Not Helpful
+    </button>
   </div>
 </div>
 `;

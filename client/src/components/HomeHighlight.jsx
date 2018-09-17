@@ -14,9 +14,20 @@ const HomeHighlight = ({ highlight }) => (
     </span>
 
     <div className={styles.helpful}>
-      <div>Helpful <i className="far fa-thumbs-up" /></div>
-      <span className={styles.interpunct}>·</span>
-      <div>Not helpful</div>
+      <button
+        className={styles.button}
+        type="button"
+      >Helpful
+        <i className="far fa-thumbs-up" />
+      </button>
+
+      <span className={styles.interpunct}> · </span>
+
+      <button
+        className={styles.button}
+        type="button"
+      >Not Helpful
+      </button>
     </div>
 
   </div>
