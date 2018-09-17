@@ -17,6 +17,8 @@
 .helpful {
   display: flex;
   flex-direction: row;
+  color: rgb(118, 118, 118);
+  margin-top: 10px;
 }
 
 .interpunct {
