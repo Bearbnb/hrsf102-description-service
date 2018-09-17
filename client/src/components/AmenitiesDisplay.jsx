@@ -11,6 +11,7 @@ const AmenitiesDisplay = ({
   showModal,
   showAmenities,
   hideAmenities,
+  hideAmenitiesPress,
 }) => {
   const column1 = displayAmenities.slice(0, 3);
   const column2 = displayAmenities.slice(3, 6);
@@ -49,6 +50,7 @@ const AmenitiesDisplay = ({
       <Amenities
         amenities={amenities}
         hideAmenities={hideAmenities}
+        hideAmenitiesPress={hideAmenitiesPress}
         showModal={showModal}
       />
 
@@ -61,6 +63,7 @@ AmenitiesDisplay.propTypes = {
   showModal: PropTypes.bool,
   showAmenities: PropTypes.func,
   hideAmenities: PropTypes.func,
+  hideAmenitiesPress: PropTypes.func,
   amenities: PropTypes.shape({
     id: PropTypes.number,
     _id: PropTypes.string,
@@ -103,6 +106,7 @@ AmenitiesDisplay.defaultProps = {
   showModal: false,
   showAmenities: () => {},
   hideAmenities: () => {},
+  hideAmenitiesPress: () => {},
   amenities: {},
 };
 

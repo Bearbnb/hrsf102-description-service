@@ -36,6 +36,7 @@ class App extends React.Component {
     };
     this.showAmenities = this.showAmenities.bind(this);
     this.hideAmenities = this.hideAmenities.bind(this);
+    this.hideAmenitiesPress = this.hideAmenities.bind(this);
     this.showDescription = this.showDescription.bind(this);
     this.hideDescription = this.hideDescription.bind(this);
   }
@@ -62,10 +63,18 @@ class App extends React.Component {
   }
 
   hideAmenities() {
-    console.log(this);
     this.setState({
       showModal: false,
     });
+  }
+
+  hideAmenitiesPress(e) {
+    console.log('press');
+    if (e.keyCode === 27) {
+      this.setState({
+        showModal: false,
+      });
+    }
   }
 
   showDescription() {
@@ -134,6 +143,7 @@ class App extends React.Component {
           showModal={showModal}
           showAmenities={this.showAmenities}
           hideAmenities={this.hideAmenities}
+          hideAmenitiesPress={this.hideAmenitiesPress}
         />
       </div>
     );

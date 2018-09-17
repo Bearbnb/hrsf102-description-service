@@ -6,26 +6,25 @@ import Amenity from './Amenity.jsx';
 import { generateAmenitiesArray } from '../../../seedDatabase/helpers';
 import styles from '../../../styles/Amenities.css';
 
-const Amenities = ({ amenities, hideAmenities, showModal }) => {
+const Amenities = ({
+  amenities,
+  hideAmenities,
+  showModal,
+  hideAmenitiesPress,
+}) => {
   const display = showModal ? styles.displayBlock : styles.displayNone;
-
-  if (showModal) {
-    document.querySelector('body').style.overflow = 'hidden';
-  } else {
-    document.querySelector('body').style.overflow = null;
-  }
 
   const amenitiesArray = generateAmenitiesArray(amenities);
   return (
-    <div>
-      <div
-        className={`${display} ${styles.modalBackdrop}`}
-        onClick={() => hideAmenities()}
-      />
-
-      <div className={`${display} ${styles.modalMain}`}>
+    <div
+      className={`${display} ${styles.modalBackdrop}`}
+      onClick={() => hideAmenities()}
+    >
+      <div 
+        className={`${styles.modalMain}`}
+      >
         <h1>Amenities</h1>
-        {amenitiesArray.map(amenity => <Amenity key={amenity.id} availableAmenity={amenity} />)}
+        {amenitiesArray.map((amenity, i) => <Amenity key={i} availableAmenity={amenity} />)}
       </div>
 
     </div>
@@ -69,12 +68,14 @@ Amenities.propTypes = {
     notIncluded: PropTypes.arrayOf(PropTypes.string),
   }),
   hideAmenities: PropTypes.func,
+  hideAmenitiesPress: PropTypes.func,
   showModal: PropTypes.bool,
 };
 
 Amenities.defaultProps = {
   amenities: {},
-  hideAmenities: null,
+  hideAmenities: () => {},
+  hideAmenitiesPress: () => {},
   showModal: false,
 };
 
