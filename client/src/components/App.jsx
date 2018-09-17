@@ -1,8 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 
-import { getRandomInt } from '../../../seedDatabase/helpers';
-
 import HomeHighlights from './HomeHighlights.jsx';
 import HeaderContainer from './HeaderContainer.jsx';
 import AmenitiesDisplay from './AmenitiesDisplay.jsx';
@@ -42,18 +40,17 @@ class App extends React.Component {
   }
 
   componentWillMount() {
-    const listing = getRandomInt(1, 101);
-    axios.get('/listings', {
-      params: {
-        id: listing,
-      },
-    }).then((res) => {
-      this.setState({
-        details: res.data,
+    const idPath = window.location.pathname;
+    const id = idPath.substring(1, idPath.length - 1);
+
+    axios.get(`/listings/${id}`)
+      .then((res) => {
+        this.setState({
+          details: res.data,
+        });
+      }).catch((err) => {
+        console.log(err);
       });
-    }).catch((err) => {
-      console.log(err);
-    });
   }
 
   showAmenities() {
