@@ -12,6 +12,13 @@ const HomeHighlight = ({ highlight }) => (
       className={styles.details}
     >{highlight.details}
     </span>
+
+    <div className={styles.helpful}>
+      <div>Helpful <i className="far fa-thumbs-up" /></div>
+      <span className={styles.interpunct}>·</span>
+      <div>Not helpful</div>
+    </div>
+
   </div>
 );
 

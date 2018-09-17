@@ -13,3 +13,13 @@
   font-weight: 400;
   font-size: 14px;
 }
+
+.helpful {
+  display: flex;
+  flex-direction: row;
+}
+
+.interpunct {
+  margin-right: 5px;
+  margin-left: 5px;
+}
