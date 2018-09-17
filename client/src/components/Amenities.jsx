@@ -23,7 +23,7 @@ const Amenities = ({
       <div 
         className={`${styles.modalMain}`}
       >
-        <h1>Amenities</h1>
+        <h1 className={styles.title}>Amenities</h1>
         {amenitiesArray.map((amenity, i) => <Amenity key={i} availableAmenity={amenity} />)}
       </div>
 

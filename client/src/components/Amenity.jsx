@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from '../../../styles/Amenity.css';
+
 const Amenity = ({ availableAmenity }) => {
   const amenityFormatMap = {
     basics: 'Basics',
@@ -11,9 +13,11 @@ const Amenity = ({ availableAmenity }) => {
   };
 
   return (
-    <div>
-      <h3>{amenityFormatMap[availableAmenity.amenity]}</h3>
-      <hr />
+    <div className={styles.amenity}>
+      <h3 className={styles.title}>
+        {amenityFormatMap[availableAmenity.amenity]}
+      </h3>
+      <div className={styles.border} />
       {availableAmenity.amenities.map((amenity => (
         <p>{amenity.name}</p>
       )))}

@@ -41,6 +41,7 @@
   margin: 80px auto 0px auto;
   height: auto;
   z-index: 2;
+  padding: 20px;
 }
 
 .displayBlock {
@@ -49,4 +50,9 @@
 
 .displayNone {
   display: none;
+}
+
+.title {
+  color: #484848;
+  margin-left: 23px;
 }

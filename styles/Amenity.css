@@ -1,6 +1,16 @@
-.amenityHr {
+/* .amenityHr {
   width: 450px;
   border: 0 none;
   height: 1px;
   color: #eee;
+} */
+
+.border {
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.amenity {
+  color: #484848;
+  width: 90%;
+  margin: 0 auto 0 auto;
 }
