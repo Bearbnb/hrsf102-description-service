@@ -5,7 +5,7 @@ import DescriptionExtended from './DescriptionExtended.jsx';
 
 import styles from '../../../styles/Description.css';
 
-const Description = ({ 
+const Description = ({
   description,
   descriptionExtended,
   showDescription,
