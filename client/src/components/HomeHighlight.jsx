@@ -34,7 +34,7 @@ class HomeHighlight extends React.Component {
     } else {
       buttonOrFeedback = (
         <div className={styles.helpful}>
-          Thank you for your feedback.
+          Thanks for your feedback.
         </div>
       );
     }
