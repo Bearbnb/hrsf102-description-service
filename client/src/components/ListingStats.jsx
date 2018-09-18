@@ -19,7 +19,7 @@ const ListingStats = ({
     </div>
 
     <div className={styles.statThree}>
-      <img 
+      <img
         className={styles.img3}
         alt=""
         src="https://s3-us-west-1.amazonaws.com/airbnb-owner-photos/beds.png" />
