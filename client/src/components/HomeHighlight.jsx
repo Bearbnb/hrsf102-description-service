@@ -8,7 +8,8 @@ const HomeHighlight = ({ highlight }) => (
     <span
       className={styles.highlight}
     >{highlight.highlight}
-    </span> · <span
+    </span>·
+    <span
       className={styles.details}
     >{highlight.details}
     </span>
