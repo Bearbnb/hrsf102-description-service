@@ -15,6 +15,16 @@ const AmenitiesDisplay = ({
 }) => {
   const column1 = displayAmenities.slice(0, 3);
   const column2 = displayAmenities.slice(3, 6);
+  console.log(displayAmenities);
+
+  const iconMap = {
+    Gym: 'https://s3.amazonaws.com/airbnb-icons/gym.png',
+    Kitchen: 'https://s3.amazonaws.com/airbnb-icons/kitchen.png',
+    Wifi: 'https://s3.amazonaws.com/airbnb-icons/wifi.png',
+    'Laptop friendly workspace': 'https://s3.amazonaws.com/airbnb-icons/laptop.png',
+    Hangers: 'https://s3.amazonaws.com/airbnb-icons/hanger.png',
+    Iron: 'https://s3.amazonaws.com/airbnb-icons/iron.png',
+  };
 
   const amenitiesCount = countAmenities(amenities);
 
@@ -28,13 +38,27 @@ const AmenitiesDisplay = ({
 
         <div>
           {column1.map(amenity => (
-            <div key={amenity.id} className={styles.amenity}>{amenity}</div>
+            <div>
+              <img alt="" src={iconMap[amenity]} />
+              <div
+                key={amenity.id}
+                className={styles.amenity}
+              >{amenity}
+              </div>
+            </div>
           ))}
         </div>
 
         <div className={styles.rightColumn}>
           {column2.map(amenity => (
-            <div key={amenity.id} className={styles.amenity}>{amenity}</div>
+            <div>
+              <img alt="" src={iconMap[amenity]} />
+              <div
+                key={amenity.id}
+                className={styles.amenity}
+              >{amenity}
+              </div>
+            </div>
           ))}
         </div>
 

@@ -72,8 +72,9 @@ const generateDescriptions = () => {
     description.description = descriptionIpsum();
     description.descriptionExtended = descriptionExtendedIpsum;
     description.homehighlights = [];
-    description.displayAmenities = displayAmenities;
+    description.displayAmenities = [];
 
+    generateProperties(displayAmenities, description.displayAmenities, 6);
     generateProperties(homeHighlights, description.homehighlights, 3);
 
     descriptions.push(description);
