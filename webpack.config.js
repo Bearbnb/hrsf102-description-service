@@ -1,5 +1,4 @@
 const path = require('path');
-// const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const SRC_DIR = path.resolve('client', 'src');
 const DIST_DIR = path.resolve('public/dist');
@@ -37,7 +36,4 @@ module.exports = {
     filename: 'bundle.js',
     path: DIST_DIR,
   },
-  // plugins: [
-  //   new ExtractTextPlugin('styles.css'),
-  // ],
 };
