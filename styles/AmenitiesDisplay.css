@@ -44,24 +44,3 @@
   flex-direction: row;
   margin-top: 20px;
 }
-
-/* .column {
-  display: grid;
-  grid-template-columns: 50px 50px;
-  grid-template-rows: 50px 50px 50px;
-}
-
-.icon1 {
-  grid-column-start: 1;
-  grid-row-start: 1;
-}
-
-.icon2 {
-  grid-column-start: 1;
-  grid-row-start: 2;
-}
-
-.icon3 {
-  grid-column-start: 1;
-  grid-row-start: 3;
-} */
