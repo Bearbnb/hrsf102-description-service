@@ -12,6 +12,24 @@ const HomeHighlight = ({ highlight }) => (
       className={styles.details}
     >{highlight.details}
     </span>
+
+    <div className={styles.helpful}>
+      <button
+        className={styles.button}
+        type="button"
+      >Helpful
+        <i className="far fa-thumbs-up" />
+      </button>
+
+      <span className={styles.interpunct}> · </span>
+
+      <button
+        className={styles.button}
+        type="button"
+      >Not Helpful
+      </button>
+    </div>
+
   </div>
 );
 

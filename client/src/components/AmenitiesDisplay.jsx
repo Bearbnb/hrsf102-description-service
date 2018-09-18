@@ -11,29 +11,63 @@ const AmenitiesDisplay = ({
   showModal,
   showAmenities,
   hideAmenities,
+  hideAmenitiesPress,
 }) => {
   const column1 = displayAmenities.slice(0, 3);
   const column2 = displayAmenities.slice(3, 6);
+
+  const iconMap = {
+    Gym: 'https://s3.amazonaws.com/airbnb-icons/gym.png',
+    Kitchen: 'https://s3.amazonaws.com/airbnb-icons/kitcher.png',
+    Wifi: 'https://s3.amazonaws.com/airbnb-icons/wifi.png',
+    'Laptop friendly workspace': 'https://s3.amazonaws.com/airbnb-icons/laptop.png',
+    Hangers: 'https://s3.amazonaws.com/airbnb-icons/hanger.png',
+    Iron: 'https://s3.amazonaws.com/airbnb-icons/iron.png',
+  };
 
   const amenitiesCount = countAmenities(amenities);
 
   return (
     <div className={styles.container}>
+
       <hr className={styles.pageBreak} />
+
       <div className={styles.title}>
         Amenities
       </div>
+
       <div className={styles.columns}>
 
         <div>
-          {column1.map(amenity => (
-            <div key={amenity.id} className={styles.amenity}>{amenity}</div>
+          {column1.map((amenity, i) => (
+            <div className={`${styles.displayAmenity} ${styles.amenity}`}>
+              <div>
+                <img
+                  alt=""
+                  src={iconMap[amenity]}
+                />
+              </div>
+
+              <div
+                key={amenity.id}
+                className={styles.amenity}
+              >{amenity}
+              </div>
+
+            </div>
           ))}
         </div>
 
         <div className={styles.rightColumn}>
           {column2.map(amenity => (
-            <div key={amenity.id} className={styles.amenity}>{amenity}</div>
+            <div className={styles.displayAmenity}>
+              <img alt="" src={iconMap[amenity]} />
+              <div
+                key={amenity.id}
+                className={styles.amenity}
+              >{amenity}
+              </div>
+            </div>
           ))}
         </div>
 
@@ -49,6 +83,7 @@ const AmenitiesDisplay = ({
       <Amenities
         amenities={amenities}
         hideAmenities={hideAmenities}
+        hideAmenitiesPress={hideAmenitiesPress}
         showModal={showModal}
       />
 
@@ -61,6 +96,7 @@ AmenitiesDisplay.propTypes = {
   showModal: PropTypes.bool,
   showAmenities: PropTypes.func,
   hideAmenities: PropTypes.func,
+  hideAmenitiesPress: PropTypes.func,
   amenities: PropTypes.shape({
     id: PropTypes.number,
     _id: PropTypes.string,
@@ -103,6 +139,7 @@ AmenitiesDisplay.defaultProps = {
   showModal: false,
   showAmenities: () => {},
   hideAmenities: () => {},
+  hideAmenitiesPress: () => {},
   amenities: {},
 };
 

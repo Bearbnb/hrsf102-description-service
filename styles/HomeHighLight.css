@@ -11,5 +11,35 @@
 
 .details {
   font-weight: 400;
+  font-size: 16px;
+}
+
+.helpful {
+  display: flex;
+  flex-direction: row;
+  color: rgb(118, 118, 118);
+  margin-top: 10px;
+}
+
+.interpunct {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.button {
+  background: none !important;
+  color: rgb(118, 118, 118);
+  border: none; 
+  padding: 0 !important;
+  margin-top: 0px;
   font-size: 14px;
+}
+
+.button:hover {
+  text-decoration: none;
+  color: rgb(0, 132, 137);
+}
+
+i {
+  margin-left: 5px;
 }

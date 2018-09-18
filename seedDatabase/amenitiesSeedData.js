@@ -48,7 +48,15 @@ const safetyFeatures = [
   { name: 'Carbon Monoxide Detector', details: '' },
   { name: 'Security guard', details: 'They\'re a cool person' }];
 
-const notIncluded = ['Private entrance', 'Washer', 'Dryer', 'TV', 'Bathroom', 'Bedroom', 'Dogs'];
+const notIncluded = [
+  { name: 'Private entrance' },
+  { name: 'Washer' },
+  { name: 'Dryer' },
+  { name: 'TV' },
+  { name: 'Bathroom' },
+  { name: 'Bedroom' },
+  { name: 'Dogs' },
+];
 
 module.exports = {
   basics,

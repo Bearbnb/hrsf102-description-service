@@ -2,21 +2,7 @@
   max-width: 600px;
   margin: 30px auto 15px auto;
   font-size: 16px;
-}
-
-.columns {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.rightColumn {
-  padding-right: 100px;
-}
-
-.amenity {
-  width: 100%;
-  margin-top: 15px;
+  color: #484848;
 }
 
 .title {
@@ -31,9 +17,30 @@
 .button {
   background: none!important;
   margin-top: 25px;
-  color: #6BB7B9;
+  color: rgb(0, 132, 137);
   border: none; 
   padding: 0!important;
   font: inherit;
   cursor: pointer;
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.rightColumn {
+  padding-right: 100px;
+}
+
+.amenity {
+  width: 100%;
+  /* margin-top: 15px; */
+}
+
+.displayAmenity {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
 }

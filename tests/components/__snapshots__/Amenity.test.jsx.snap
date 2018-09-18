@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Amenity /> should render properly 1`] = `
+<div
+  className="amenity"
+>
+  <h3
+    className="title"
+  >
+    Basics
+  </h3>
+  <div
+    className="border"
+  />
+  <p>
+    Heating
+  </p>
+</div>
+`;

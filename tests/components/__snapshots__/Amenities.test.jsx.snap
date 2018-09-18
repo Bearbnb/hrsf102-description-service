@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Amenities /> should render properly 1`] = `
+<div
+  className="displayNone modalBackdrop"
+  onClick={[Function]}
+>
+  <div
+    className="modalMain"
+  >
+    <h1
+      className="title"
+    >
+      Amenities
+    </h1>
+  </div>
+</div>
+`;

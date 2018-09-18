@@ -31,9 +31,11 @@ const Description = ({
 
   return (
     <div className={styles.container}>
+
       <p>
         {description}
       </p>
+
       <DescriptionExtended
         hideDescription={hideDescription}
         descriptionExtended={descriptionExtended}

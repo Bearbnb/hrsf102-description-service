@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DescriptionExtended /> should render properly 1`] = `
+<div
+  className="container fadeOut"
+>
+  <div>
+    <span>
+      THE SPACE
+    </span>
+    <p>
+      THERE'S A LOT
+    </p>
+  </div>
+  <div>
+    <span>
+      VERY IMPORTANT
+    </span>
+    <p>
+      TESTS ARE IMPORTANT
+    </p>
+  </div>
+  <div>
+    <span>
+      GUEST ACCESS
+    </span>
+    <p>
+      DRIVE THERE
+    </p>
+  </div>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    Hide
+  </button>
+</div>
+`;

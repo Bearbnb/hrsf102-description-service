@@ -1,8 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 
-import { getRandomInt } from '../../../seedDatabase/helpers';
-
 import HomeHighlights from './HomeHighlights.jsx';
 import HeaderContainer from './HeaderContainer.jsx';
 import AmenitiesDisplay from './AmenitiesDisplay.jsx';
@@ -36,23 +34,23 @@ class App extends React.Component {
     };
     this.showAmenities = this.showAmenities.bind(this);
     this.hideAmenities = this.hideAmenities.bind(this);
+    this.hideAmenitiesPress = this.hideAmenities.bind(this);
     this.showDescription = this.showDescription.bind(this);
     this.hideDescription = this.hideDescription.bind(this);
   }
 
   componentWillMount() {
-    const listing = getRandomInt(1, 101);
-    axios.get('/listings', {
-      params: {
-        id: listing,
-      },
-    }).then((res) => {
-      this.setState({
-        details: res.data,
+    const idPath = window.location.pathname;
+    const id = idPath.substring(1, idPath.length - 1);
+
+    axios.get(`/listings/${id}`)
+      .then((res) => {
+        this.setState({
+          details: res.data,
+        });
+      }).catch((err) => {
+        console.log(err);
       });
-    }).catch((err) => {
-      console.log(err);
-    });
   }
 
   showAmenities() {
@@ -62,10 +60,17 @@ class App extends React.Component {
   }
 
   hideAmenities() {
-    console.log(this);
     this.setState({
       showModal: false,
     });
+  }
+
+  hideAmenitiesPress(e) {
+    if (e.keyCode === 27) {
+      this.setState({
+        showModal: false,
+      });
+    }
   }
 
   showDescription() {
@@ -75,7 +80,6 @@ class App extends React.Component {
   }
 
   hideDescription() {
-    console.log('hidden');
     this.setState({
       showDescriptionExtended: false,
     });
@@ -105,6 +109,7 @@ class App extends React.Component {
     if (ownerName === '') {
       return <div />;
     }
+    
     return (
       <div className={styles.container}>
         <HeaderContainer
@@ -118,9 +123,11 @@ class App extends React.Component {
           location={location}
           livingSpace={livingSpace}
         />
+
         <HomeHighlights
           homehighlights={homehighlights}
         />
+
         <Description
           description={description}
           descriptionExtended={descriptionExtended}
@@ -128,12 +135,14 @@ class App extends React.Component {
           hideDescription={this.hideDescription}
           showDescriptionExtended={showDescriptionExtended}
         />
+
         <AmenitiesDisplay
           displayAmenities={displayAmenities}
           amenities={amenities}
           showModal={showModal}
           showAmenities={this.showAmenities}
           hideAmenities={this.hideAmenities}
+          hideAmenitiesPress={this.hideAmenitiesPress}
         />
       </div>
     );

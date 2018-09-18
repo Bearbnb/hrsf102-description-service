@@ -1,24 +1,22 @@
 .modalBackdrop {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: auto;
   background: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow-y: scroll;
 }
 
 .modalMain {
-  position: fixed;
-  background: white;
-  width: 50%;
-  max-height: 100vh;
-  overflow-y: auto;
-  top: 50%;
-  left: 50%;
-  z-index: 1041;
-  transform: translate(-50%,-50%);
   box-shadow: 0 0 7px #C8C8C8;
+  background: white;
+  max-width: 450px;
+  margin: 80px auto 0px auto;
+  height: auto;
+  z-index: 2;
+  padding: 20px;
 }
 
 .displayBlock {
@@ -27,4 +25,9 @@
 
 .displayNone {
   display: none;
+}
+
+.title {
+  color: #484848;
+  margin-left: 23px;
 }
