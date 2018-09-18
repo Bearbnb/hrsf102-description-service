@@ -48,10 +48,22 @@ const Description = ({
 
 Description.propTypes = {
   description: PropTypes.string,
+  descriptionExtended: PropTypes.shapeOf(PropTypes.number),
+  showDescription: PropTypes.func,
+  hideDescription: PropTypes.func,
+  showDescriptionExtended: PropTypes.bool,
 };
 
 Description.defaultProps = {
   description: '',
+  descriptionExtended: {
+    'THE SPACE': 'IT\'S LARGE',
+    'VERY IMPORTANT:': 'DON\'T TOUCH THINGS',
+    'GUEST ACCESS': 'USE THE DOOR',
+  },
+  showDescription: () => {},
+  hideDescription: () => {},
+  showDescriptionExtended: false,
 };
 
 export default Description;
