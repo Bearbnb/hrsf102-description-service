@@ -5,12 +5,9 @@ exports[`<HeaderContainer /> should render properly 1`] = `
   className="wrapper"
 >
   <Header
-    baths={0}
-    beds={0}
     livingSpace="Apartment"
     location="San Francisco"
     name="Cozy thing"
-    ownerName="Charlie P"
   />
   <ListingStats
     baths={0}

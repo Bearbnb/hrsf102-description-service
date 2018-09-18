@@ -5,7 +5,17 @@ exports[`<Description /> should render properly 1`] = `
   className="container"
 >
   <p />
-  <DescriptionExtended />
+  <DescriptionExtended
+    descriptionExtended={
+      Object {
+        "GUEST ACCESS": "USE THE DOOR",
+        "THE SPACE": "IT'S LARGE",
+        "VERY IMPORTANT:": "DON'T TOUCH THINGS",
+      }
+    }
+    hideDescription={[Function]}
+    showDescriptionExtended={false}
+  />
   <button
     className="button"
     onClick={[Function]}
