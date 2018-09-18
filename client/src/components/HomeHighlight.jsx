@@ -1,37 +1,52 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Thumbs from './Thumbs.jsx';
+import Highlight from './Highlight.jsx';
+
 import styles from '../../../styles/HomeHighlight.css';
 
-const HomeHighlight = ({ highlight }) => (
-  <div className={styles.container}>
-    <span
-      className={styles.highlight}
-    >{highlight.highlight}
-    </span> · <span
-      className={styles.details}
-    >{highlight.details}
-    </span>
+class HomeHighlight extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showThumbs: true,
+    };
 
-    <div className={styles.helpful}>
-      <button
-        className={styles.button}
-        type="button"
-      >Helpful
-        <i className="far fa-thumbs-up" />
-      </button>
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-      <span className={styles.interpunct}> · </span>
+  handleClick() {
+    this.setState({
+      showThumbs: false,
+    });
+  }
 
-      <button
-        className={styles.button}
-        type="button"
-      >Not Helpful
-      </button>
-    </div>
+  render() {
+    const { highlight } = this.props;
+    const { showThumbs } = this.state;
+    let buttonOrFeedback;
 
-  </div>
-);
+    if (showThumbs) {
+      buttonOrFeedback = (
+        <Thumbs handleClick={this.handleClick} />
+      );
+    } else {
+      buttonOrFeedback = (
+        <div className={styles.helpful}>
+          Thanks for your feedback.
+        </div>
+      );
+    }
+
+    return (
+      <div className={styles.container}>
+        <Highlight highlight={highlight} />
+        {buttonOrFeedback}
+      </div>
+    );
+  }
+}
 
 HomeHighlight.propTypes = {
   highlight: PropTypes.objectOf(PropTypes.string),

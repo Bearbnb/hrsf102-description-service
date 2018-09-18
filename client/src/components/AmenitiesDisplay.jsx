@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Amenities from './Amenities.jsx';
 import styles from '../../../styles/AmenitiesDisplay.css';
-import { countAmenities } from '../../../seedDatabase/helpers';
+import { countAmenities, iconMap } from '../../../seedDatabase/helpers';
 
 const AmenitiesDisplay = ({
   displayAmenities,
@@ -15,15 +15,6 @@ const AmenitiesDisplay = ({
 }) => {
   const column1 = displayAmenities.slice(0, 3);
   const column2 = displayAmenities.slice(3, 6);
-
-  const iconMap = {
-    Gym: 'https://s3.amazonaws.com/airbnb-icons/gym.png',
-    Kitchen: 'https://s3.amazonaws.com/airbnb-icons/kitcher.png',
-    Wifi: 'https://s3.amazonaws.com/airbnb-icons/wifi.png',
-    'Laptop friendly workspace': 'https://s3.amazonaws.com/airbnb-icons/laptop.png',
-    Hangers: 'https://s3.amazonaws.com/airbnb-icons/hanger.png',
-    Iron: 'https://s3.amazonaws.com/airbnb-icons/iron.png',
-  };
 
   const amenitiesCount = countAmenities(amenities);
 

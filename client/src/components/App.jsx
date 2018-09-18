@@ -65,14 +65,6 @@ class App extends React.Component {
     });
   }
 
-  hideAmenitiesPress(e) {
-    if (e.keyCode === 27) {
-      this.setState({
-        showModal: false,
-      });
-    }
-  }
-
   showDescription() {
     this.setState({
       showDescriptionExtended: true,
@@ -109,7 +101,7 @@ class App extends React.Component {
     if (ownerName === '') {
       return <div />;
     }
-    
+
     return (
       <div className={styles.container}>
         <HeaderContainer

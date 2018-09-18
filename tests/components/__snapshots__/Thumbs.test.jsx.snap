@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Thumbs /> should render properly 1`] = `
+<div
+  className="helpful"
+>
+  <button
+    className="button"
+    onClick={[Function]}
+    type="button"
+  >
+    Helpful
+    <i
+      className="far fa-thumbs-up"
+    />
+  </button>
+  <span
+    className="interpunct"
+  >
+    ·
+  </span>
+  <button
+    className="button"
+    onClick={[Function]}
+    type="button"
+  >
+    Not Helpful
+  </button>
+</div>
+`;

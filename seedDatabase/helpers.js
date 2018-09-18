@@ -18,6 +18,15 @@ const descriptionIpsum = () => `Escape civilization to this incredible and peace
 Reconnect with nature and disconnect from technology on your own private deck surrounded 
 by pristine and untouched nature just a short drive away from LA.`;
 
+const iconMap = {
+  Gym: 'https://s3.amazonaws.com/airbnb-icons/gym.png',
+  Kitchen: 'https://s3.amazonaws.com/airbnb-icons/kitcher.png',
+  Wifi: 'https://s3.amazonaws.com/airbnb-icons/wifi.png',
+  'Laptop friendly workspace': 'https://s3.amazonaws.com/airbnb-icons/laptop.png',
+  Hangers: 'https://s3.amazonaws.com/airbnb-icons/hanger.png',
+  Iron: 'https://s3.amazonaws.com/airbnb-icons/iron.png',
+};
+
 const descriptionExtendedIpsum = {
   'THE SPACE': ['This is the personal Airstream of a nature-loving Malibu designer who built it as his personal getaway from his busy hectic schedule. Stripped down to its bare aluminum studs, the airstream has been redesigned into a large studio with three large frameless glass panels that slide open to a huge cantilevered deck with unrivaled views of the pristine Santa Monica mountains rolling down to the Pacific ocean below.',
     'Lounge in our luxury extra thick wool rugs and cotton poufs, drive down to surf one of Malibu\'s best breaks or go hike Sandstone Peak (Santa Monica\'s highest mountain). But whatever you do, make sure not to miss the incredible sunsets off our deck. At night, watch the milky way appear and count the constellations above or the moon reflect on the ocean below. And if the wind is right, listen to the sounds of the crashing waves travel up the canyon or even the seals barking down below.', 'And then at dawn, if you\'re lucky with the morning fog, wake up above the clouds like you are the only person in this planet.'],
@@ -61,7 +70,6 @@ const generateAmenitiesArray = (amenities) => {
   return amenitiesArray;
 };
 
-
 module.exports = {
   getRandomInt,
   generateProperties,
@@ -69,4 +77,5 @@ module.exports = {
   descriptionExtendedIpsum,
   countAmenities,
   generateAmenitiesArray,
+  iconMap,
 };

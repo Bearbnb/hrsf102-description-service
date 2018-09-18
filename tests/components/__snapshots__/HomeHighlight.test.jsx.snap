@@ -4,40 +4,16 @@ exports[`<HomeHighlight /> should render properly 1`] = `
 <div
   className="container"
 >
-  <span
-    className="highlight"
-  >
-    Self Check-in
-  </span>
-   · 
-  <span
-    className="details"
-  >
-    Easily check yourself in with the lockbox.
-  </span>
-  <div
-    className="helpful"
-  >
-    <button
-      className="button"
-      type="button"
-    >
-      Helpful
-      <i
-        className="far fa-thumbs-up"
-      />
-    </button>
-    <span
-      className="interpunct"
-    >
-       · 
-    </span>
-    <button
-      className="button"
-      type="button"
-    >
-      Not Helpful
-    </button>
-  </div>
+  <Highlight
+    highlight={
+      Object {
+        "details": "Easily check yourself in with the lockbox.",
+        "highlight": "Self Check-in",
+      }
+    }
+  />
+  <Thumbs
+    handleClick={[Function]}
+  />
 </div>
 `;

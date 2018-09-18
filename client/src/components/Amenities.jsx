@@ -10,7 +10,6 @@ const Amenities = ({
   amenities,
   hideAmenities,
   showModal,
-  hideAmenitiesPress,
 }) => {
   const display = showModal ? styles.displayBlock : styles.displayNone;
 
@@ -68,14 +67,12 @@ Amenities.propTypes = {
     notIncluded: PropTypes.arrayOf(PropTypes.string),
   }),
   hideAmenities: PropTypes.func,
-  hideAmenitiesPress: PropTypes.func,
   showModal: PropTypes.bool,
 };
 
 Amenities.defaultProps = {
   amenities: {},
   hideAmenities: () => {},
-  hideAmenitiesPress: () => {},
   showModal: false,
 };
 
