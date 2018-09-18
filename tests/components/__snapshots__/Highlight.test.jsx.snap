@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Highlight /> should render properly 1`] = `
+<div>
+  <span
+    className="highlight"
+  >
+    Self Check-in
+  </span>
+  <span
+    className="interpunct"
+  >
+    ·
+  </span>
+  <span
+    className="details"
+  >
+    Easily check yourself in with the lockbox.
+  </span>
+</div>
+`;
