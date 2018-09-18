@@ -32,7 +32,7 @@ const DescriptionExtended = ({
 };
 
 DescriptionExtended.propTypes = {
-  descriptionExtended: PropTypes.shapeOf(PropTypes.number),
+  descriptionExtended: PropTypes.objectOf(PropTypes.string),
   hideDescription: PropTypes.func,
   showDescriptionExtended: PropTypes.bool,
 };
