@@ -18,8 +18,7 @@
     "build": "webpack --config webpack.config.js --w",
     "dev": "nodemon server/server.js",
     "test": "jest",
-    "test-watch": "jest --watch --coverage",
-    "debug": "NODE_ENV=debug npm test"
+    "test-watch": "jest --watch --coverage"
   },
   "dependencies": {
     "axios": "^0.18.0",

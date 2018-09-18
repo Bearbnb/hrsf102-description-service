@@ -1,4 +1,4 @@
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import React from 'react';
 import toJson from 'enzyme-to-json';
 import Description from '../../client/src/components/Description';

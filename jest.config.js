@@ -5,5 +5,4 @@ module.exports = {
     '\\.(css)$': 'identity-obj-proxy',
   },
   collectCoverage: true,
-  preset: 'jest-puppeteer',
 };
