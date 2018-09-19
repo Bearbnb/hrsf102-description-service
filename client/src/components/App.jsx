@@ -43,7 +43,7 @@ class App extends React.Component {
     const idPath = window.location.pathname;
     const id = idPath.substring(1, idPath.length - 1);
 
-    axios.get(`/listings/${id}`)
+    axios.get(`http://localhost:8080/listings/${id}`)
       .then((res) => {
         this.setState({
           details: res.data,
