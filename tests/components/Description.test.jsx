@@ -17,7 +17,7 @@ describe('<Description />', () => {
   });
 
   it('should not render an expand button if showDescriptionExtended is true', () => {
-    const wrapper = shallow(<Description showDescriptionExtended={true} />);
+    const wrapper = shallow(<Description showDescriptionExtended />);
 
     expect(wrapper.find('button')).toHaveLength(0);
   });

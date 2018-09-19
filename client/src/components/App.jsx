@@ -49,7 +49,7 @@ class App extends React.Component {
           details: res.data,
         });
       }).catch((err) => {
-        console.log(err);
+        console.error(err);
       });
   }
 
