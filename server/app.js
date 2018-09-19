@@ -8,7 +8,6 @@ const { getListing } = require('../database/model.js');
 
 app.use('/:id', express.static(path.resolve(__dirname, '../public')));
 
-
 app.get('/listings/:id', (req, res) => {
   getListing(req.params.id, (listing) => {
     res.send(listing);
