@@ -9,14 +9,14 @@ describe('Server', () => {
   });
 
   it('should respond to a GET method to listings', () => {
-    return request(app).get('/listings/1').then((response) => {
+    return request(app).get('/descriptions/1').then((response) => {
       expect(response.statusCode).toBe(200);
     });
   });
 
   it('respond with json', (done) => {
     request(app)
-      .get('/listings/1')
+      .get('/descriptions/1')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, done);
