@@ -34,6 +34,7 @@ const AmenitiesDisplay = ({
             <div className={`${styles.displayAmenity} ${styles.amenity}`}>
               <div>
                 <img
+                  className={styles.img}
                   alt=""
                   src={iconMap[amenity]}
                 />
@@ -52,7 +53,11 @@ const AmenitiesDisplay = ({
         <div className={styles.rightColumn}>
           {column2.map(amenity => (
             <div className={styles.displayAmenity}>
-              <img alt="" src={iconMap[amenity]} />
+              <img
+                alt=""
+                src={iconMap[amenity]}
+                className={styles.img}
+              />
               <div
                 key={amenity.id}
                 className={styles.amenity}
