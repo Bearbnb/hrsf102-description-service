@@ -11,7 +11,7 @@ exports[`<Thumbs /> should render properly 1`] = `
   >
     Helpful
     <i
-      className="far fa-thumbs-up"
+      className="i far fa-thumbs-up"
     />
   </button>
   <span

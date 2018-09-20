@@ -9,12 +9,20 @@ const ListingStats = ({
   <div className={styles.container}>
 
     <div className={styles.statOne}>
-      <img alt="" src="https://s3-us-west-1.amazonaws.com/airbnb-owner-photos/guests.png" />
+      <img
+        alt=""
+        className={styles.img}
+        src="https://s3-us-west-1.amazonaws.com/airbnb-owner-photos/guests.png"
+      />
       <div>{guests} guests</div>
     </div>
 
     <div className={styles.statTwo}>
-      <img alt="" src="https://s3-us-west-1.amazonaws.com/airbnb-owner-photos/living.png" />
+      <img
+        alt=""
+        className={styles.img}
+        src="https://s3-us-west-1.amazonaws.com/airbnb-owner-photos/living.png"
+      />
       <div>{bedrooms} bedrooms</div>
     </div>
 
@@ -29,6 +37,7 @@ const ListingStats = ({
 
     <div className={styles.statFour}>
       <img
+        className={styles.img}
         alt=""
         src="https://s3-us-west-1.amazonaws.com/airbnb-owner-photos/bath.png"
       />

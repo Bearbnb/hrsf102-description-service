@@ -12,7 +12,7 @@ const Thumbs = ({ handleClick }) => (
       type="button"
       onClick={() => handleClick()}
     >Helpful
-      <i className="far fa-thumbs-up" />
+      <i className={`${styles.i} far fa-thumbs-up`} />
     </button>
 
     <span className={styles.interpunct}>·</span>
