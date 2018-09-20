@@ -9,7 +9,7 @@ describe('Server', () => {
   });
 
   it('should respond to a GET method to listings', () => {
-    return request(app).get('/listings/1').then((response) => {
+    return request(app).get('/descriptions/1').then((response) => {
       expect(response.statusCode).toBe(200);
     });
   });
