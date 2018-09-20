@@ -16,7 +16,7 @@ describe('Server', () => {
 
   it('respond with json', (done) => {
     request(app)
-      .get('/listings/1')
+      .get('/descriptions/1')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, done);
